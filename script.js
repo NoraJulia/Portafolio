@@ -53,11 +53,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ---- PROYECTO TABS ---- */
+  const tabs = document.querySelectorAll('.proyecto-tab');
+  const panels = document.querySelectorAll('.proyecto-panel');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const idx = tab.dataset.tab;
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      panels.forEach(p => p.classList.remove('active'));
+      document.querySelector(`.proyecto-panel[data-panel="${idx}"]`).classList.add('active');
+    });
+  });
+
   /* ---- EYE CANVAS ANIMATION ---- */
   const canvas = document.getElementById('eye-canvas');
   const ctx = canvas.getContext('2d');
   let eyes = [];
   let lastTime = 0;
+  let mouseX = 0.5;
+  let mouseY = 0.5;
+
+  document.addEventListener('mousemove', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    mouseX = (e.clientX - rect.left) / rect.width;
+    mouseY = (e.clientY - rect.top) / rect.height;
+  });
 
   class Eye {
     constructor(x, y, size, phase) {
@@ -71,10 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
       this.wobbleSpeed = 0.6 + Math.random() * 1.4;
       this.pupilX = 0;
       this.pupilY = 0;
-      this.pupilTargetX = (Math.random() - 0.5) * 0.5;
-      this.pupilTargetY = (Math.random() - 0.5) * 0.4;
-      this.pupilTimer = Math.random() * 3;
-      this.pupilChange = 2 + Math.random() * 3;
+      this.pupilTargetX = 0;
+      this.pupilTargetY = 0;
     }
 
     update(dt) {
@@ -82,15 +102,18 @@ document.addEventListener('DOMContentLoaded', () => {
       if (this.phase > 1) this.phase -= 1;
       this.wobblePhase += dt * this.wobbleSpeed;
 
-      this.pupilTimer += dt;
-      if (this.pupilTimer > this.pupilChange) {
-        this.pupilTimer = 0;
-        this.pupilChange = 1.5 + Math.random() * 3;
-        this.pupilTargetX = (Math.random() - 0.5) * 0.5;
-        this.pupilTargetY = (Math.random() - 0.5) * 0.4;
+      const dx = mouseX - this.baseX / canvas.width;
+      const dy = mouseY - this.baseY / canvas.height;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist > 0.01) {
+        this.pupilTargetX = (dx / dist) * Math.min(dist * 2, 0.4);
+        this.pupilTargetY = (dy / dist) * Math.min(dist * 2, 0.3);
+      } else {
+        this.pupilTargetX = 0;
+        this.pupilTargetY = 0;
       }
-      this.pupilX += (this.pupilTargetX - this.pupilX) * dt * 4;
-      this.pupilY += (this.pupilTargetY - this.pupilY) * dt * 4;
+      this.pupilX += (this.pupilTargetX - this.pupilX) * dt * 6;
+      this.pupilY += (this.pupilTargetY - this.pupilY) * dt * 6;
     }
 
     getOpenAmount() {

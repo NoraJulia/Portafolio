@@ -21,6 +21,7 @@
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#links">Links</a></li>
         <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#cv">CV</a></li>
       </ul>
       <button class="nav-toggle" id="nav-toggle" aria-label="Menú">
         <span></span>
@@ -62,123 +63,134 @@
       <div class="container">
         <h2 class="section-title">Proyectos</h2>
 
-        <article class="proyecto">
-          <div class="proyecto-content">
-            <h3>Warden of Forest <span class="proyecto-year">(2024)</span></h3>
-            <div class="proyecto-tags">
-              <span>Game Design</span>
-              <span>Level Design</span>
-              <span>3D Art</span>
-            </div>
-            <p>En este juego te embarcas a proteger el bosque mágico que está siendo atacado por criaturas de la oscuridad que desean apagar todo el brillo de este hermoso bosque.</p>
-            <h4 class="proyecto-rol-heading">Rol y responsabilidades</h4>
-            <p class="proyecto-rol-cat">Programación del Juego</p>
-            <ul class="proyecto-details">
-              <li>Programé el boss final y su sistema de combate</li>
-              <li>Participé en la mecánica de los enemigos y su programación</li>
-              <li>Programé el puzzle del juego</li>
-            </ul>
-            <p class="proyecto-rol-cat">Diseño de nivel</p>
-            <ul class="proyecto-details">
-              <li>Diseñé y agregué una parte del bosque mágico</li>
-              <li>Diseñé el puzzle y lo implementé</li>
-            </ul>
-            <p class="proyecto-rol-cat">Arte 3D</p>
-            <ul class="proyecto-details">
-              <li>Modelé las plataformas</li>
-              <li>Modelé las piedras de los puzzles</li>
-              <li>Creé las partículas de los enemigos e implementé todo al motor</li>
-            </ul>
-          </div>
-          <div class="proyecto-thumb">
-            <div class="proyecto-thumb-inner">
-              <img src="" alt="" class="proyecto-img">
-              <div class="proyecto-img-placeholder">
-                <i class="fas fa-image"></i>
-                <span>Thumbnail</span>
-              </div>
-              <button class="proyecto-video-btn" aria-label="Ver video">
-                <i class="fas fa-play"></i>
-              </button>
-            </div>
-          </div>
-        </article>
+        <div class="proyecto-selector">
+          <button class="proyecto-tab active" data-tab="0">
+            <span class="proyecto-tab-logo">W</span>
+            <span class="proyecto-tab-name">Warden of Forest</span>
+          </button>
+          <button class="proyecto-tab" data-tab="1">
+            <span class="proyecto-tab-logo"><img src="assets/swappy-and-switch.jpeg" alt="Swappy and Switch" style="width:100%;height:100%;border-radius:50%;object-fit:cover;"></span>
+            <span class="proyecto-tab-name">Swappy and Switch</span>
+          </button>
+          <button class="proyecto-tab" data-tab="2">
+            <span class="proyecto-tab-logo"><img src="assets/last-shot-i-swear.png" alt="Last Shot, I Swear" style="width:100%;height:100%;border-radius:50%;object-fit:cover;"></span>
+            <span class="proyecto-tab-name">Last Shot, I Swear</span>
+          </button>
+        </div>
 
-        <article class="proyecto">
-          <div class="proyecto-content">
-            <h3>Swappy and Switch <span class="proyecto-year">(2025)</span></h3>
-            <div class="proyecto-tags">
-              <span>Game Design</span>
-              <span>Programming</span>
-            </div>
-            <p>Descripción del proyecto. Explica de qué trata, qué rol tuviste y qué herramientas usaste. Este texto da contexto al trabajo realizado.</p>
-            <h4 class="proyecto-rol-heading">Rol y responsabilidades</h4>
-            <p class="proyecto-rol-cat">Game Design</p>
-            <ul class="proyecto-details">
-              <li>Diseñé las mecánicas de intercambio y físicas del juego</li>
-              <li>Balanceé la dificultad y los sistemas de puntuación</li>
-            </ul>
-            <p class="proyecto-rol-cat">Programming</p>
-            <ul class="proyecto-details">
-              <li>Programé la lógica principal del juego en el motor</li>
-              <li>Implementé el sistema de inputs y la UI interactiva</li>
-              <li>Optimicé el rendimiento para la plataforma objetivo</li>
-            </ul>
-          </div>
-          <div class="proyecto-thumb">
-            <div class="proyecto-thumb-inner">
-              <img src="" alt="" class="proyecto-img">
-              <div class="proyecto-img-placeholder">
-                <i class="fas fa-image"></i>
-                <span>Thumbnail</span>
+        <div class="proyecto-panels">
+          <article class="proyecto-panel active" data-panel="0">
+            <div class="proyecto-content">
+              <h3>Warden of Forest <span class="proyecto-year">(2024)</span></h3>
+              <div class="proyecto-tags">
+                <span>Game Design</span>
+                <span>Level Design</span>
+                <span>3D Art</span>
               </div>
-              <button class="proyecto-video-btn" aria-label="Ver video">
-                <i class="fas fa-play"></i>
-              </button>
+              <p>En este juego te embarcas a proteger el bosque mágico que está siendo atacado por criaturas de la oscuridad que desean apagar todo el brillo de este hermoso bosque.</p>
+              <h4 class="proyecto-rol-heading">Rol y responsabilidades</h4>
+              <p class="proyecto-rol-cat">Programación del Juego</p>
+              <ul class="proyecto-details">
+                <li>Programé el boss final y su sistema de combate</li>
+                <li>Participé en la mecánica de los enemigos y su programación</li>
+                <li>Programé el puzzle del juego</li>
+              </ul>
+              <p class="proyecto-rol-cat">Diseño de nivel</p>
+              <ul class="proyecto-details">
+                <li>Diseñé y agregué una parte del bosque mágico</li>
+                <li>Diseñé el puzzle y lo implementé</li>
+              </ul>
+              <p class="proyecto-rol-cat">Arte 3D</p>
+              <ul class="proyecto-details">
+                <li>Modelé las plataformas</li>
+                <li>Modelé las piedras de los puzzles</li>
+                <li>Creé las partículas de los enemigos e implementé todo al motor</li>
+              </ul>
             </div>
-          </div>
-        </article>
-
-        <article class="proyecto">
-          <div class="proyecto-content">
-            <h3>Last Shot, I Swear <span class="proyecto-year">(2025)</span></h3>
-            <div class="proyecto-tags">
-              <span>Game Design</span>
-              <span>Level Design</span>
-              <span>3D Art</span>
-            </div>
-            <p>Descripción del proyecto. Explica de qué trata, qué rol tuviste y qué herramientas usaste. Este texto da contexto al trabajo realizado.</p>
-            <h4 class="proyecto-rol-heading">Rol y responsabilidades</h4>
-            <p class="proyecto-rol-cat">Game Design</p>
-            <ul class="proyecto-details">
-              <li>Diseñé el sistema de combate y las mecánicas de armas</li>
-              <li>Creé el sistema de progresión y mejoras del jugador</li>
-            </ul>
-            <p class="proyecto-rol-cat">Level Design</p>
-            <ul class="proyecto-details">
-              <li>Diseñé los escenarios y la disposición de los encuentros</li>
-              <li>Implementé checkpoints y rutas de navegación</li>
-            </ul>
-            <p class="proyecto-rol-cat">3D Art</p>
-            <ul class="proyecto-details">
-              <li>Modelé personajes, armas y entornos 3D</li>
-              <li>Creé texturas, materiales y optimización de assets</li>
-            </ul>
-          </div>
-          <div class="proyecto-thumb">
-            <div class="proyecto-thumb-inner">
-              <img src="" alt="" class="proyecto-img">
-              <div class="proyecto-img-placeholder">
-                <i class="fas fa-image"></i>
-                <span>Thumbnail</span>
+            <div class="proyecto-thumb">
+              <div class="proyecto-thumb-inner">
+                <img src="" alt="" class="proyecto-img">
+                <div class="proyecto-img-placeholder">
+                  <i class="fas fa-image"></i>
+                  <span>Thumbnail</span>
+                </div>
+                <button class="proyecto-video-btn" aria-label="Ver video">
+                  <i class="fas fa-play"></i>
+                </button>
               </div>
-              <button class="proyecto-video-btn" aria-label="Ver video">
-                <i class="fas fa-play"></i>
-              </button>
             </div>
-          </div>
-        </article>
+          </article>
 
+          <article class="proyecto-panel" data-panel="1">
+            <div class="proyecto-content">
+              <h3>Swappy and Switch <span class="proyecto-year">(2026)</span></h3>
+              <div class="proyecto-tags">
+                <span>Game Design</span>
+                <span>Programming</span>
+              </div>
+              <p>En este juego lleno de color debes adentrarte junto a otro compañero en un mundo de plataformas, donde la comunicación con tu aliado es clave para resolver puzzles y superar niveles con un giro que añade dificultad a cada desafío.</p>
+              <h4 class="proyecto-rol-heading">Rol y responsabilidades</h4>
+              <p class="proyecto-rol-cat">Arte 3D</p>
+              <ul class="proyecto-details">
+                <li>Creé assets y entornos tridimensionales para el juego</li>
+                <li>Modelé y texturicé personajes y escenarios</li>
+                <li>Optimicé los modelos 3D para rendimiento en el motor</li>
+              </ul>
+            </div>
+            <div class="proyecto-thumb">
+              <div class="proyecto-thumb-inner">
+                <img src="" alt="" class="proyecto-img">
+                <div class="proyecto-img-placeholder">
+                  <i class="fas fa-image"></i>
+                  <span>Thumbnail</span>
+                </div>
+                <button class="proyecto-video-btn" aria-label="Ver video">
+                  <i class="fas fa-play"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="proyecto-panel" data-panel="2">
+            <div class="proyecto-content">
+              <h3>Last Shot, I Swear <span class="proyecto-year">(2025)</span></h3>
+              <div class="proyecto-tags">
+                <span>Game Design</span>
+                <span>Level Design</span>
+                <span>3D Art</span>
+              </div>
+              <p>Descripción del proyecto. Explica de qué trata, qué rol tuviste y qué herramientas usaste. Este texto da contexto al trabajo realizado.</p>
+              <h4 class="proyecto-rol-heading">Rol y responsabilidades</h4>
+              <p class="proyecto-rol-cat">Game Design</p>
+              <ul class="proyecto-details">
+                <li>Diseñé el sistema de combate y las mecánicas de armas</li>
+                <li>Creé el sistema de progresión y mejoras del jugador</li>
+              </ul>
+              <p class="proyecto-rol-cat">Level Design</p>
+              <ul class="proyecto-details">
+                <li>Diseñé los escenarios y la disposición de los encuentros</li>
+                <li>Implementé checkpoints y rutas de navegación</li>
+              </ul>
+              <p class="proyecto-rol-cat">3D Art</p>
+              <ul class="proyecto-details">
+                <li>Modelé personajes, armas y entornos 3D</li>
+                <li>Creé texturas, materiales y optimización de assets</li>
+              </ul>
+            </div>
+            <div class="proyecto-thumb">
+              <div class="proyecto-thumb-inner">
+                <img src="" alt="" class="proyecto-img">
+                <div class="proyecto-img-placeholder">
+                  <i class="fas fa-image"></i>
+                  <span>Thumbnail</span>
+                </div>
+                <button class="proyecto-video-btn" aria-label="Ver video">
+                  <i class="fas fa-play"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -228,6 +240,71 @@
             <a href="#" target="_blank" rel="noopener noreferrer" aria-label="ArtStation"><i class="fab fa-artstation"></i></a>
             <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades" class="habilidades section">
+      <div class="container">
+        <h2 class="section-title">Habilidades y Programas</h2>
+        <div class="skills-grid">
+          <div class="skill-cat">
+            <h3 class="skill-cat-title">Motores</h3>
+            <div class="skill-items">
+              <span class="skill-item">Unity</span>
+              <span class="skill-item">Unreal Engine</span>
+            </div>
+          </div>
+          <div class="skill-cat">
+            <h3 class="skill-cat-title">Programación</h3>
+            <div class="skill-items">
+              <span class="skill-item">C#</span>
+              <span class="skill-item">C++</span>
+              <span class="skill-item">Python</span>
+            </div>
+          </div>
+          <div class="skill-cat">
+            <h3 class="skill-cat-title">Modelado 3D</h3>
+            <div class="skill-items">
+              <span class="skill-item">Blender</span>
+              <span class="skill-item">Maya</span>
+              <span class="skill-item">ZBrush</span>
+            </div>
+          </div>
+          <div class="skill-cat">
+            <h3 class="skill-cat-title">Diseño</h3>
+            <div class="skill-items">
+              <span class="skill-item">Game Design</span>
+              <span class="skill-item">Level Design</span>
+              <span class="skill-item">UI/UX</span>
+            </div>
+          </div>
+          <div class="skill-cat">
+            <h3 class="skill-cat-title">Control de Versiones</h3>
+            <div class="skill-items">
+              <span class="skill-item">Git</span>
+              <span class="skill-item">GitHub</span>
+              <span class="skill-item">Perforce</span>
+            </div>
+          </div>
+          <div class="skill-cat">
+            <h3 class="skill-cat-title">Otros</h3>
+            <div class="skill-items">
+              <span class="skill-item">Photoshop</span>
+              <span class="skill-item">Substance Painter</span>
+              <span class="skill-item">Figma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cv" class="cv section">
+      <div class="container">
+        <h2 class="section-title">Currículum</h2>
+        <div class="cv-content">
+          <p class="cv-text">Descarga mi currículum para conocer más sobre mi experiencia y formación.</p>
+          <a href="#" class="cv-btn" download><i class="fas fa-download"></i> Descargar CV</a>
         </div>
       </div>
     </section>
