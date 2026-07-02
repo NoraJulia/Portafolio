@@ -44,6 +44,9 @@
           <a href="#links" class="hero-btn" data-i18n="hero-btn-links">Ver mis links</a>
         </div>
       </div>
+      <div class="hero-scroll">
+        <i class="fas fa-angle-double-down"></i>
+      </div>
     </section>
 
     <section id="sobre-mi" class="about section">
@@ -251,48 +254,42 @@
           <div class="skill-cat">
             <h3 class="skill-cat-title" data-i18n="skill-motores">Motores</h3>
             <div class="skill-items">
-              <span class="skill-item">Unity</span>
-              <span class="skill-item">Unreal Engine</span>
+              <span class="skill-item"><i class="fab fa-unity" style="font-size: 1.3rem;"></i> Unity</span>
             </div>
           </div>
           <div class="skill-cat">
-            <h3 class="skill-cat-title" data-i18n="skill-programacion">Programación</h3>
+            <h3 class="skill-cat-title" data-i18n="skill-programacion">Lenguajes de Programación</h3>
             <div class="skill-items">
-              <span class="skill-item">C#</span>
-              <span class="skill-item">C++</span>
-              <span class="skill-item">Python</span>
+              <span class="skill-item"><i class="fas fa-code"></i> C#</span>
             </div>
           </div>
           <div class="skill-cat">
             <h3 class="skill-cat-title" data-i18n="skill-modelado">Modelado 3D</h3>
             <div class="skill-items">
-              <span class="skill-item">Blender</span>
-              <span class="skill-item">Maya</span>
-              <span class="skill-item">ZBrush</span>
+              <span class="skill-item"><span class="skill-icon-img" style="mask-image: url(assets/blender-logo.svg); -webkit-mask-image: url(assets/blender-logo.svg); width: 1.6rem; height: 1.6rem;"></span> Blender</span>
+              <span class="skill-item"><span class="skill-icon-img" style="mask-image: url(assets/zbrush-logo.png); -webkit-mask-image: url(assets/zbrush-logo.png); width: 2.2rem; height: 2.2rem;"></span> ZBrush</span>
             </div>
           </div>
           <div class="skill-cat">
             <h3 class="skill-cat-title" data-i18n="skill-diseno">Diseño</h3>
             <div class="skill-items">
-              <span class="skill-item">Game Design</span>
-              <span class="skill-item">Level Design</span>
-              <span class="skill-item">UI/UX</span>
+              <span class="skill-item"><i class="fas fa-gamepad"></i> Game Design</span>
+              <span class="skill-item"><i class="fas fa-layer-group"></i> Level Design</span>
             </div>
           </div>
           <div class="skill-cat">
             <h3 class="skill-cat-title" data-i18n="skill-control-versiones">Control de Versiones</h3>
             <div class="skill-items">
-              <span class="skill-item">Git</span>
-              <span class="skill-item">GitHub</span>
-              <span class="skill-item">Perforce</span>
+              <span class="skill-item"><i class="fab fa-git-alt" style="font-size: 1.3rem;"></i> Git</span>
+              <span class="skill-item"><i class="fab fa-github" style="font-size: 1.3rem;"></i> GitHub</span>
             </div>
           </div>
           <div class="skill-cat">
             <h3 class="skill-cat-title" data-i18n="skill-otros">Otros</h3>
             <div class="skill-items">
-              <span class="skill-item">Photoshop</span>
-              <span class="skill-item">Substance Painter</span>
-              <span class="skill-item">Figma</span>
+              <span class="skill-item"><span class="skill-icon-img" style="mask-image: url(assets/photoshop-logo.svg); -webkit-mask-image: url(assets/photoshop-logo.svg); width: 1.6rem; height: 1.6rem;"></span> Photoshop</span>
+              <span class="skill-item"><span class="skill-icon-img" style="mask-image: url(assets/substance-painter-logo.svg); -webkit-mask-image: url(assets/substance-painter-logo.svg); width: 1.6rem; height: 1.6rem;"></span> Substance Painter 3D</span>
+              <span class="skill-item"><span class="skill-icon-img" style="mask-image: url(assets/mari-logo.svg); -webkit-mask-image: url(assets/mari-logo.svg); width: 1.4rem; height: 1.4rem;"></span> Mari</span>
             </div>
           </div>
         </div>
@@ -304,10 +301,11 @@
         <h2 class="section-title" data-i18n="cv-title">Currículum</h2>
         <div class="cv-content">
           <p class="cv-text" data-i18n="cv-text">Descarga mi currículum para conocer más sobre mi experiencia y formación.</p>
-          <a href="#" class="cv-btn" download><i class="fas fa-download"></i> <span data-i18n="cv-btn">Descargar CV</span></a>
+          <span class="cv-btn"><i class="fas fa-download"></i> <span data-i18n="cv-btn">Descargar CV</span></span>
         </div>
       </div>
     </section>
+
   </main>
 
   <div class="video-modal" id="video-modal">
@@ -323,6 +321,10 @@
       <p data-i18n="footer">&copy; 2026 Julián David González Quiroga — NoraJulia</p>
     </div>
   </footer>
+
+  <button class="scroll-to-top" id="scroll-to-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   <script src="script.js"></script>
 </body>

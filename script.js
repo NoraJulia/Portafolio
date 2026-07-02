@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'nav-contacto': { es: 'Contacto', en: 'Contact' },
     'nav-cv': { es: 'CV', en: 'CV' },
     'hero-tagline': { es: 'Game Developer | JR 3D Character Artist | JR 3D Environment Artist', en: 'Game Developer | JR 3D Character Artist | JR 3D Environment Artist' },
+    'hero-scroll-text': { es: 'Scroll', en: 'Scroll' },
     'hero-btn-proyectos': { es: 'Ver proyectos', en: 'View projects' },
     'hero-btn-links': { es: 'Ver mis links', en: 'View my links' },
     'about-title': { es: 'Sobre mí', en: 'About me' },
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'proyecto-1-rol-1-li-3': { es: 'Optimicé los modelos 3D para mejorar el rendimiento en el motor', en: 'Optimized 3D models for better engine performance' },
     'proyecto-1-participacion': { es: 'Este proyecto fue creado para la Global Game Jam. Me encargué de todo el arte 3D, desde la creación de assets hasta la optimización de los modelos para el motor. También trabajé en la creación del entorno y el nivel.', en: 'This project was created for the Global Game Jam. I was in charge of all the 3D art, from asset creation to model optimization for the engine. I also worked on creating the environment and the level.' },
     'proyecto-2-desc': { es: 'En este juego eres un borrachito que estuvo bebiendo toda la noche y ahora debe encontrar el camino al trabajo. Debes estar atento, porque nada es lo que parece y podrías llegar al lugar equivocado.', en: 'In this game you are a little drunk who has been drinking all night and now must find the way to work. Stay alert, because nothing is as it seems and you might end up in the wrong place.' },
-    'proyecto-2-rol-2': { es: 'Diseño de nivel', en: 'Level Design' },
+    'proyecto-2-rol-2': { es: 'Level Design', en: 'Level Design' },
     'proyecto-2-rol-2-li-1': { es: 'Diseñé escenarios urbanos con rutas engañosas y puntos de referencia cambiantes', en: 'Designed urban scenarios with deceptive routes and shifting landmarks' },
     'proyecto-2-rol-2-li-2': { es: 'Implementé puntos de control y elementos interactivos en el entorno', en: 'Implemented checkpoints and interactive elements in the environment' },
     'proyecto-2-rol-3': { es: '3D Art', en: '3D Art' },
@@ -55,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'contacto-text': { es: '¿Tienes un proyecto en mente? Hablemos.', en: 'Have a project in mind? Let\'s talk.' },
     'habilidades-title': { es: 'Habilidades y Programas', en: 'Skills & Software' },
     'skill-motores': { es: 'Motores', en: 'Engines' },
-    'skill-programacion': { es: 'Programación', en: 'Programming' },
+    'skill-programacion': { es: 'Lenguajes de Programación', en: 'Programming Languages' },
     'skill-modelado': { es: 'Modelado 3D', en: '3D Modeling' },
     'skill-diseno': { es: 'Diseño', en: 'Design' },
     'skill-control-versiones': { es: 'Control de Versiones', en: 'Version Control' },
@@ -147,6 +148,21 @@ document.addEventListener('DOMContentLoaded', () => {
     revealObserver.observe(el);
   });
 
+  /* ---- SCROLL TO TOP ---- */
+  const scrollBtn = document.getElementById('scroll-to-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > window.innerHeight * 0.5) {
+      scrollBtn.classList.add('visible');
+    } else {
+      scrollBtn.classList.remove('visible');
+    }
+  });
+
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
   /* ---- SMOOTH SCROLL ---- */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
@@ -162,13 +178,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelectorAll('.proyecto-tab');
   const panels = document.querySelectorAll('.proyecto-panel');
 
+  let switching = false;
+
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
+      if (switching) return;
       const idx = tab.dataset.tab;
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      panels.forEach(p => p.classList.remove('active'));
-      document.querySelector(`.proyecto-panel[data-panel="${idx}"]`).classList.add('active');
+      const activePanel = document.querySelector('.proyecto-panel.active');
+      if (!activePanel || activePanel.dataset.panel === idx) return;
+
+      switching = true;
+      activePanel.classList.add('fade-out');
+
+      setTimeout(() => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        panels.forEach(p => p.classList.remove('active', 'fade-out'));
+        document.querySelector(`.proyecto-panel[data-panel="${idx}"]`).classList.add('active');
+        switching = false;
+      }, 280);
     });
   });
 
