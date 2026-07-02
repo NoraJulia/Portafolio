@@ -16,13 +16,14 @@
     <nav class="nav container">
       <a href="#inicio" class="nav-logo">Julián David González Quiroga <span class="nav-tag">/ NoraJulia</span></a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#links">Links</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-        <li><a href="#cv">CV</a></li>
+        <li><a href="#inicio" data-i18n="nav-inicio">Inicio</a></li>
+        <li><a href="#sobre-mi" data-i18n="nav-sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos" data-i18n="nav-proyectos">Proyectos</a></li>
+        <li><a href="#links" data-i18n="nav-links">Links</a></li>
+        <li><a href="#contacto" data-i18n="nav-contacto">Contacto</a></li>
+        <li><a href="#cv" data-i18n="nav-cv">CV</a></li>
       </ul>
+      <button class="lang-btn" id="lang-btn" aria-label="Toggle language">EN</button>
       <button class="nav-toggle" id="nav-toggle" aria-label="Menú">
         <span></span>
         <span></span>
@@ -37,20 +38,20 @@
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <h1>Julián David<br />González Quiroga</h1>
-        <p class="hero-tagline">Game Developer | JR 3D Character Artist | JR 3D Environment Artist</p>
+        <p class="hero-tagline" data-i18n="hero-tagline">Game Developer | JR 3D Character Artist | JR 3D Environment Artist</p>
         <div class="hero-btns">
-          <a href="#proyectos" class="hero-btn">Ver proyectos</a>
-          <a href="#links" class="hero-btn">Ver mis links</a>
+          <a href="#proyectos" class="hero-btn" data-i18n="hero-btn-proyectos">Ver proyectos</a>
+          <a href="#links" class="hero-btn" data-i18n="hero-btn-links">Ver mis links</a>
         </div>
       </div>
     </section>
 
     <section id="sobre-mi" class="about section">
       <div class="container">
-        <h2 class="section-title">Sobre mí</h2>
+        <h2 class="section-title" data-i18n="about-title">Sobre mí</h2>
         <div class="about-content">
           <div class="about-text">
-            <p>Hago que las historias cobren vida diseñando mundos inmersivos como desarrollador de videojuegos y artista 3D. Actualmente enfoco mi carrera en el modelado 3D de personajes y entornos, dominando herramientas clave para la creación de escenarios envolventes y modelos listos para integrarse en el motor de juego. Me apasiona resolver los retos técnicos que conectan el arte con la programación, buscando siempre que la estética visual potencie la jugabilidad. Mi meta en cada proyecto es asegurar que cada asset visual esté lo mejor optimizado posible para el motor de juego, garantizando un rendimiento fluido y un acabado visual de alta calidad.</p>
+            <p data-i18n="about-text">Hago que las historias cobren vida diseñando mundos inmersivos como desarrollador de videojuegos y artista 3D. Actualmente enfoco mi carrera en el modelado 3D de personajes y entornos, dominando herramientas clave para la creación de escenarios envolventes y modelos listos para integrarse en el motor de juego. Me apasiona resolver los retos técnicos que conectan el arte con la programación, buscando siempre que la estética visual potencie la jugabilidad. Mi meta en cada proyecto es asegurar que cada asset visual esté lo mejor optimizado posible para el motor de juego, garantizando un rendimiento fluido y un acabado visual de alta calidad.</p>
           </div>
           <div class="about-image">
             <div class="avatar-placeholder">JD</div>
@@ -61,11 +62,11 @@
 
     <section id="proyectos" class="proyectos section">
       <div class="container">
-        <h2 class="section-title">Proyectos</h2>
+        <h2 class="section-title" data-i18n="proyectos-title">Proyectos</h2>
 
         <div class="proyecto-selector">
           <button class="proyecto-tab active" data-tab="0">
-            <span class="proyecto-tab-logo">W</span>
+            <span class="proyecto-tab-logo"><img src="assets/Warden of forest.png" alt="Warden Of Forest" style="width:100%;height:100%;border-radius:50%;object-fit:cover;"></span>
             <span class="proyecto-tab-name">Warden of Forest</span>
           </button>
           <button class="proyecto-tab" data-tab="1">
@@ -80,113 +81,112 @@
 
         <div class="proyecto-panels">
           <article class="proyecto-panel active" data-panel="0">
-            <div class="proyecto-content">
               <h3>Warden of Forest <span class="proyecto-year">(2024)</span></h3>
               <div class="proyecto-tags">
-                <span>Game Design</span>
-                <span>Level Design</span>
-                <span>3D Art</span>
               </div>
-              <p>En este juego te embarcas a proteger el bosque mágico que está siendo atacado por criaturas de la oscuridad que desean apagar todo el brillo de este hermoso bosque.</p>
-              <h4 class="proyecto-rol-heading">Rol y responsabilidades</h4>
-              <p class="proyecto-rol-cat">Programación del Juego</p>
-              <ul class="proyecto-details">
-                <li>Programé el boss final y su sistema de combate</li>
-                <li>Participé en la mecánica de los enemigos y su programación</li>
-                <li>Programé el puzzle del juego</li>
-              </ul>
-              <p class="proyecto-rol-cat">Diseño de nivel</p>
-              <ul class="proyecto-details">
-                <li>Diseñé y agregué una parte del bosque mágico</li>
-                <li>Diseñé el puzzle y lo implementé</li>
-              </ul>
-              <p class="proyecto-rol-cat">Arte 3D</p>
-              <ul class="proyecto-details">
-                <li>Modelé las plataformas</li>
-                <li>Modelé las piedras de los puzzles</li>
-                <li>Creé las partículas de los enemigos e implementé todo al motor</li>
-              </ul>
+              <p data-i18n="proyecto-0-desc">En este juego te embarcas a proteger el bosque mágico que está siendo atacado por criaturas de la oscuridad que desean apagar todo el brillo de este hermoso bosque.</p>
+            <div class="proyecto-panel-inner">
+              <div class="proyecto-content">
+                <h4 class="proyecto-rol-heading" data-i18n="rol-heading">Rol y responsabilidades</h4>
+                <p class="proyecto-rol-cat" data-i18n="proyecto-0-rol-1">Programación del Juego</p>
+                <ul class="proyecto-details">
+                  <li data-i18n="proyecto-0-rol-1-li-1">Programé el boss final y su sistema de combate</li>
+                  <li data-i18n="proyecto-0-rol-1-li-2">Participé en la mecánica de los enemigos y su programación</li>
+                  <li data-i18n="proyecto-0-rol-1-li-3">Programé el puzzle del juego</li>
+                </ul>
+                <p class="proyecto-rol-cat" data-i18n="proyecto-0-rol-2">Diseño de nivel</p>
+                <ul class="proyecto-details">
+                  <li data-i18n="proyecto-0-rol-2-li-1">Diseñé y agregué una parte del bosque mágico</li>
+                  <li data-i18n="proyecto-0-rol-2-li-2">Diseñé el puzzle y lo implementé</li>
+                </ul>
+                <p class="proyecto-rol-cat" data-i18n="proyecto-0-rol-3">Arte 3D</p>
+                <ul class="proyecto-details">
+                  <li data-i18n="proyecto-0-rol-3-li-1">Modelé las plataformas</li>
+                  <li data-i18n="proyecto-0-rol-3-li-2">Modelé las piedras de los puzzles</li>
+                  <li data-i18n="proyecto-0-rol-3-li-3">Creé las partículas de los enemigos e implementé todo al motor</li>
+                </ul>
+              </div>
+              <aside class="proyecto-participacion">
+                <h4>Mi participación</h4>
+                <p data-i18n="proyecto-0-participacion">Este fue el proyecto final que presenté para la carrera de desarrollo de videojuegos y entornos interactivos, creado con otros dos compañeros. Participé en la creación de varios modelos 3D como las plataformas flotantes y las rocas de los puzzles, entre otros. También creé partículas como las de los enemigos y el boss al recibir daño, e implementé estos assets y partículas en el motor buscando siempre el rendimiento del juego. Participé en el desarrollo del mapa y su sistema de parkour. Otra parte importante en la que trabajé fue en la implementación del jefe final con sus mecánicas y estados de combate, arreglé algunos errores que tenían los enemigos y su máquina de estados, y programé el puzzle antes del jefe final.</p>
+              </aside>
             </div>
-            <div class="proyecto-thumb">
-              <div class="proyecto-thumb-inner">
-                <img src="" alt="" class="proyecto-img">
-                <div class="proyecto-img-placeholder">
-                  <i class="fas fa-image"></i>
-                  <span>Thumbnail</span>
+            <div class="proyecto-media">
+              <div class="media-grid">
+                <div class="media-item media-video">
+                  <img src="assets/Warden%20of%20forest.png" alt="Warden of Forest" class="media-img">
+                  <a href="https://www.youtube.com/watch?v=eznnJjT8Rl4" target="_blank" rel="noopener noreferrer" class="media-play-btn" aria-label="Ver video" onclick="event.preventDefault(); openVideo('eznnJjT8Rl4')">
+                    <i class="fas fa-play"></i>
+                  </a>
                 </div>
-                <button class="proyecto-video-btn" aria-label="Ver video">
-                  <i class="fas fa-play"></i>
-                </button>
+                <div class="media-item media-video">
+                  <img src="https://img.youtube.com/vi/gy4hUhq4QNQ/maxresdefault.jpg" alt="Video thumbnail" class="media-img">
+                  <a href="https://youtu.be/gy4hUhq4QNQ" target="_blank" rel="noopener noreferrer" class="media-play-btn" aria-label="Ver video" onclick="event.preventDefault(); openVideo('gy4hUhq4QNQ')">
+                    <i class="fas fa-play"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </article>
 
           <article class="proyecto-panel" data-panel="1">
-            <div class="proyecto-content">
               <h3>Swappy and Switch <span class="proyecto-year">(2026)</span></h3>
               <div class="proyecto-tags">
-                <span>Game Design</span>
-                <span>Programming</span>
               </div>
-              <p>En este juego lleno de color debes adentrarte junto a otro compañero en un mundo de plataformas, donde la comunicación con tu aliado es clave para resolver puzzles y superar niveles con un giro que añade dificultad a cada desafío.</p>
-              <h4 class="proyecto-rol-heading">Rol y responsabilidades</h4>
-              <p class="proyecto-rol-cat">Arte 3D</p>
-              <ul class="proyecto-details">
-                <li>Creé assets y entornos tridimensionales para el juego</li>
-                <li>Modelé y texturicé personajes y escenarios</li>
-                <li>Optimicé los modelos 3D para rendimiento en el motor</li>
-              </ul>
+              <p data-i18n="proyecto-1-desc">En este juego lleno de color debes adentrarte junto a un compañero en un mundo de plataformas, donde la comunicación es clave para resolver puzzles y superar niveles con un giro que añade dificultad a cada desafío.</p>
+            <div class="proyecto-panel-inner">
+              <div class="proyecto-content">
+                <h4 class="proyecto-rol-heading" data-i18n="rol-heading">Rol y responsabilidades</h4>
+                <p class="proyecto-rol-cat" data-i18n="proyecto-1-rol-1">Arte 3D</p>
+                <ul class="proyecto-details">
+                  <li data-i18n="proyecto-1-rol-1-li-1">Creé assets y entornos tridimensionales para el juego</li>
+                  <li data-i18n="proyecto-1-rol-1-li-2">Modelé y texturicé personajes y escenarios</li>
+                  <li data-i18n="proyecto-1-rol-1-li-3">Optimicé los modelos 3D para mejorar el rendimiento en el motor</li>
+                </ul>
+              </div>
+              <aside class="proyecto-participacion">
+                <h4>Mi participación</h4>
+                <p data-i18n="proyecto-1-participacion">Este proyecto fue creado para la Global Game Jam. Me encargué de todo el arte 3D, desde la creación de assets hasta la optimización de los modelos para el motor. También trabajé en la creación del entorno y el nivel.</p>
+              </aside>
             </div>
-            <div class="proyecto-thumb">
-              <div class="proyecto-thumb-inner">
-                <img src="" alt="" class="proyecto-img">
-                <div class="proyecto-img-placeholder">
-                  <i class="fas fa-image"></i>
-                  <span>Thumbnail</span>
+            <div class="proyecto-media">
+              <div class="media-grid">
+                <div class="media-item media-image">
+                  <img src="assets/swappy-and-switch.jpeg" alt="Swappy and Switch" class="media-img">
                 </div>
-                <button class="proyecto-video-btn" aria-label="Ver video">
-                  <i class="fas fa-play"></i>
-                </button>
               </div>
             </div>
           </article>
 
           <article class="proyecto-panel" data-panel="2">
-            <div class="proyecto-content">
               <h3>Last Shot, I Swear <span class="proyecto-year">(2025)</span></h3>
               <div class="proyecto-tags">
-                <span>Game Design</span>
-                <span>Level Design</span>
-                <span>3D Art</span>
               </div>
-              <p>Descripción del proyecto. Explica de qué trata, qué rol tuviste y qué herramientas usaste. Este texto da contexto al trabajo realizado.</p>
-              <h4 class="proyecto-rol-heading">Rol y responsabilidades</h4>
-              <p class="proyecto-rol-cat">Game Design</p>
-              <ul class="proyecto-details">
-                <li>Diseñé el sistema de combate y las mecánicas de armas</li>
-                <li>Creé el sistema de progresión y mejoras del jugador</li>
-              </ul>
-              <p class="proyecto-rol-cat">Level Design</p>
-              <ul class="proyecto-details">
-                <li>Diseñé los escenarios y la disposición de los encuentros</li>
-                <li>Implementé checkpoints y rutas de navegación</li>
-              </ul>
-              <p class="proyecto-rol-cat">3D Art</p>
-              <ul class="proyecto-details">
-                <li>Modelé personajes, armas y entornos 3D</li>
-                <li>Creé texturas, materiales y optimización de assets</li>
-              </ul>
+              <p data-i18n="proyecto-2-desc">En este juego eres un borrachito que estuvo bebiendo toda la noche y ahora debe encontrar el camino al trabajo. Debes estar atento, porque nada es lo que parece y podrías llegar al lugar equivocado.</p>
+            <div class="proyecto-panel-inner">
+              <div class="proyecto-content">
+                <h4 class="proyecto-rol-heading" data-i18n="rol-heading">Rol y responsabilidades</h4>
+                <p class="proyecto-rol-cat" data-i18n="proyecto-2-rol-2">Level Design</p>
+                <ul class="proyecto-details">
+                  <li data-i18n="proyecto-2-rol-2-li-1">Diseñé escenarios urbanos con rutas engañosas y puntos de referencia cambiantes</li>
+                  <li data-i18n="proyecto-2-rol-2-li-2">Implementé puntos de control y elementos interactivos en el entorno</li>
+                </ul>
+                <p class="proyecto-rol-cat" data-i18n="proyecto-2-rol-3">3D Art</p>
+                <ul class="proyecto-details">
+                  <li data-i18n="proyecto-2-rol-3-li-1">Modelé entornos urbanos y escenas para el juego</li>
+                  <li data-i18n="proyecto-2-rol-3-li-2">Texturicé los assets y optimicé los modelos para el motor</li>
+                </ul>
+              </div>
+              <aside class="proyecto-participacion">
+                <h4>Mi participación</h4>
+                <p data-i18n="proyecto-2-participacion">Este proyecto fue creado para la Woman Game Jam. Participé en el modelado 3D de los entornos urbanos y en el diseño de nivel. Me centré en crear un entorno que hiciera perder al jugador pero que a la vez fuera llamativo. Trabajé estrechamente con el área de diseño 2D y animación 2D para poder llegar al producto final y al estilo que deseábamos.</p>
+              </aside>
             </div>
-            <div class="proyecto-thumb">
-              <div class="proyecto-thumb-inner">
-                <img src="" alt="" class="proyecto-img">
-                <div class="proyecto-img-placeholder">
-                  <i class="fas fa-image"></i>
-                  <span>Thumbnail</span>
+            <div class="proyecto-media">
+              <div class="media-grid">
+                <div class="media-item media-image">
+                  <img src="assets/last-shot-i-swear.png" alt="Last Shot, I Swear" class="media-img">
                 </div>
-                <button class="proyecto-video-btn" aria-label="Ver video">
-                  <i class="fas fa-play"></i>
-                </button>
               </div>
             </div>
           </article>
@@ -196,30 +196,30 @@
 
     <section id="links" class="links section">
       <div class="container">
-        <h2 class="section-title">Links</h2>
+        <h2 class="section-title" data-i18n="links-title">Links</h2>
         <div class="links-grid">
-          <a href="#" target="_blank" rel="noopener noreferrer" class="link-card itch">
+          <a href="https://norajulia.itch.io/" target="_blank" rel="noopener noreferrer" class="link-card itch">
             <div class="link-icon"><i class="fab fa-itch-io"></i></div>
             <h3>Itch.io</h3>
-            <p>Juegos publicados</p>
+            <p data-i18n="links-itch-desc">Juegos publicados</p>
             <span class="link-arrow"><i class="fas fa-arrow-right"></i></span>
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" class="link-card github">
+          <a href="https://github.com/NoraJulia" target="_blank" rel="noopener noreferrer" class="link-card github">
             <div class="link-icon"><i class="fab fa-github"></i></div>
             <h3>GitHub</h3>
-            <p>Código y proyectos</p>
+            <p data-i18n="links-github-desc">Código y proyectos</p>
             <span class="link-arrow"><i class="fas fa-arrow-right"></i></span>
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" class="link-card artstation">
+          <a href="https://www.artstation.com/norajylia" target="_blank" rel="noopener noreferrer" class="link-card artstation">
             <div class="link-icon"><i class="fab fa-artstation"></i></div>
             <h3>ArtStation</h3>
-            <p>Portafolio 3D</p>
+            <p data-i18n="links-artstation-desc">Portafolio 3D</p>
             <span class="link-arrow"><i class="fas fa-arrow-right"></i></span>
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" class="link-card linkedin">
+          <a href="https://www.linkedin.com/in/julian-david-gonzalez-quiroga-635291230" target="_blank" rel="noopener noreferrer" class="link-card linkedin">
             <div class="link-icon"><i class="fab fa-linkedin-in"></i></div>
             <h3>LinkedIn</h3>
-            <p>Perfil profesional</p>
+            <p data-i18n="links-linkedin-desc">Perfil profesional</p>
             <span class="link-arrow"><i class="fas fa-arrow-right"></i></span>
           </a>
         </div>
@@ -228,17 +228,17 @@
 
     <section id="contacto" class="contact section">
       <div class="container">
-        <h2 class="section-title">Contacto</h2>
+        <h2 class="section-title" data-i18n="contacto-title">Contacto</h2>
         <div class="contact-content">
-          <p class="contact-text">¿Tienes un proyecto en mente? Hablemos.</p>
+          <p class="contact-text" data-i18n="contacto-text">¿Tienes un proyecto en mente? Hablemos.</p>
           <a href="mailto:gonzalezjulian021@gmail.com" class="contact-email">
             <i class="fas fa-envelope"></i> gonzalezjulian021@gmail.com
           </a>
           <div class="contact-social">
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="ArtStation"><i class="fab fa-artstation"></i></a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://norajulia.itch.io/" target="_blank" rel="noopener noreferrer" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+            <a href="https://github.com/NoraJulia" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.artstation.com/norajylia" target="_blank" rel="noopener noreferrer" aria-label="ArtStation"><i class="fab fa-artstation"></i></a>
+            <a href="https://www.linkedin.com/in/julian-david-gonzalez-quiroga-635291230" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>
@@ -246,17 +246,17 @@
 
     <section id="habilidades" class="habilidades section">
       <div class="container">
-        <h2 class="section-title">Habilidades y Programas</h2>
+        <h2 class="section-title" data-i18n="habilidades-title">Habilidades y Programas</h2>
         <div class="skills-grid">
           <div class="skill-cat">
-            <h3 class="skill-cat-title">Motores</h3>
+            <h3 class="skill-cat-title" data-i18n="skill-motores">Motores</h3>
             <div class="skill-items">
               <span class="skill-item">Unity</span>
               <span class="skill-item">Unreal Engine</span>
             </div>
           </div>
           <div class="skill-cat">
-            <h3 class="skill-cat-title">Programación</h3>
+            <h3 class="skill-cat-title" data-i18n="skill-programacion">Programación</h3>
             <div class="skill-items">
               <span class="skill-item">C#</span>
               <span class="skill-item">C++</span>
@@ -264,7 +264,7 @@
             </div>
           </div>
           <div class="skill-cat">
-            <h3 class="skill-cat-title">Modelado 3D</h3>
+            <h3 class="skill-cat-title" data-i18n="skill-modelado">Modelado 3D</h3>
             <div class="skill-items">
               <span class="skill-item">Blender</span>
               <span class="skill-item">Maya</span>
@@ -272,7 +272,7 @@
             </div>
           </div>
           <div class="skill-cat">
-            <h3 class="skill-cat-title">Diseño</h3>
+            <h3 class="skill-cat-title" data-i18n="skill-diseno">Diseño</h3>
             <div class="skill-items">
               <span class="skill-item">Game Design</span>
               <span class="skill-item">Level Design</span>
@@ -280,7 +280,7 @@
             </div>
           </div>
           <div class="skill-cat">
-            <h3 class="skill-cat-title">Control de Versiones</h3>
+            <h3 class="skill-cat-title" data-i18n="skill-control-versiones">Control de Versiones</h3>
             <div class="skill-items">
               <span class="skill-item">Git</span>
               <span class="skill-item">GitHub</span>
@@ -288,7 +288,7 @@
             </div>
           </div>
           <div class="skill-cat">
-            <h3 class="skill-cat-title">Otros</h3>
+            <h3 class="skill-cat-title" data-i18n="skill-otros">Otros</h3>
             <div class="skill-items">
               <span class="skill-item">Photoshop</span>
               <span class="skill-item">Substance Painter</span>
@@ -301,18 +301,26 @@
 
     <section id="cv" class="cv section">
       <div class="container">
-        <h2 class="section-title">Currículum</h2>
+        <h2 class="section-title" data-i18n="cv-title">Currículum</h2>
         <div class="cv-content">
-          <p class="cv-text">Descarga mi currículum para conocer más sobre mi experiencia y formación.</p>
-          <a href="#" class="cv-btn" download><i class="fas fa-download"></i> Descargar CV</a>
+          <p class="cv-text" data-i18n="cv-text">Descarga mi currículum para conocer más sobre mi experiencia y formación.</p>
+          <a href="#" class="cv-btn" download><i class="fas fa-download"></i> <span data-i18n="cv-btn">Descargar CV</span></a>
         </div>
       </div>
     </section>
   </main>
 
+  <div class="video-modal" id="video-modal">
+    <div class="video-modal-overlay" onclick="closeVideo()"></div>
+    <div class="video-modal-content">
+      <button class="video-modal-close" onclick="closeVideo()">&times;</button>
+      <iframe id="video-iframe" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </div>
+
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 Julián David González Quiroga — NoraJulia</p>
+      <p data-i18n="footer">&copy; 2026 Julián David González Quiroga — NoraJulia</p>
     </div>
   </footer>
 

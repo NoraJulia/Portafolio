@@ -1,5 +1,110 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ---- TRANSLATION ---- */
+  const translations = {
+    'nav-inicio': { es: 'Inicio', en: 'Home' },
+    'nav-sobre-mi': { es: 'Sobre mí', en: 'About me' },
+    'nav-proyectos': { es: 'Proyectos', en: 'Projects' },
+    'nav-links': { es: 'Links', en: 'Links' },
+    'nav-contacto': { es: 'Contacto', en: 'Contact' },
+    'nav-cv': { es: 'CV', en: 'CV' },
+    'hero-tagline': { es: 'Game Developer | JR 3D Character Artist | JR 3D Environment Artist', en: 'Game Developer | JR 3D Character Artist | JR 3D Environment Artist' },
+    'hero-btn-proyectos': { es: 'Ver proyectos', en: 'View projects' },
+    'hero-btn-links': { es: 'Ver mis links', en: 'View my links' },
+    'about-title': { es: 'Sobre mí', en: 'About me' },
+    'about-text': {
+      es: 'Hago que las historias cobren vida diseñando mundos inmersivos como desarrollador de videojuegos y artista 3D. Actualmente enfoco mi carrera en el modelado 3D de personajes y entornos, dominando herramientas clave para la creación de escenarios envolventes y modelos listos para integrarse en el motor de juego. Me apasiona resolver los retos técnicos que conectan el arte con la programación, buscando siempre que la estética visual potencie la jugabilidad. Mi meta en cada proyecto es asegurar que cada asset visual esté lo mejor optimizado posible para el motor de juego, garantizando un rendimiento fluido y un acabado visual de alta calidad.',
+      en: 'I bring stories to life by designing immersive worlds as a video game developer and 3D artist. I currently focus my career on 3D character and environment modeling, mastering key tools for creating engaging scenarios and models ready to integrate into the game engine. I am passionate about solving the technical challenges that connect art with programming, always ensuring that visual aesthetics enhance gameplay. My goal in every project is to make sure every visual asset is as optimized as possible for the game engine, guaranteeing smooth performance and high-quality visual results.'
+    },
+    'proyectos-title': { es: 'Proyectos', en: 'Projects' },
+    'rol-heading': { es: 'Rol y responsabilidades', en: 'Role & responsibilities' },
+    'proyecto-0-desc': { es: 'En este juego te embarcas a proteger el bosque mágico que está siendo atacado por criaturas de la oscuridad que desean apagar todo el brillo de este hermoso bosque.', en: 'In this game you embark on a quest to protect the magical forest being attacked by creatures of darkness who seek to extinguish all the light of this beautiful woodland.' },
+    'proyecto-0-rol-1': { es: 'Programación del Juego', en: 'Game Programming' },
+    'proyecto-0-rol-1-li-1': { es: 'Programé el boss final y su sistema de combate', en: 'Programmed the final boss and its combat system' },
+    'proyecto-0-rol-1-li-2': { es: 'Participé en la mecánica de los enemigos y su programación', en: 'Worked on enemy mechanics and programming' },
+    'proyecto-0-rol-1-li-3': { es: 'Programé el puzzle del juego', en: 'Programmed the game puzzle' },
+    'proyecto-0-rol-2': { es: 'Diseño de nivel', en: 'Level Design' },
+    'proyecto-0-rol-2-li-1': { es: 'Diseñé y agregué una parte del bosque mágico', en: 'Designed and built a section of the magical forest' },
+    'proyecto-0-rol-2-li-2': { es: 'Diseñé el puzzle y lo implementé', en: 'Designed and implemented the puzzle' },
+    'proyecto-0-rol-3': { es: 'Arte 3D', en: '3D Art' },
+    'proyecto-0-rol-3-li-1': { es: 'Modelé las plataformas', en: 'Modeled the platforms' },
+    'proyecto-0-rol-3-li-2': { es: 'Modelé las piedras de los puzzles', en: 'Modeled the puzzle stones' },
+    'proyecto-0-rol-3-li-3': { es: 'Creé las partículas de los enemigos e implementé todo al motor', en: 'Created enemy particles and implemented everything in the engine' },
+    'proyecto-0-participacion': { es: 'Este fue el proyecto final que presenté para la carrera de desarrollo de videojuegos y entornos interactivos, creado con otros dos compañeros. Participé en la creación de varios modelos 3D como las plataformas flotantes y las rocas de los puzzles, entre otros. También creé partículas como las de los enemigos y el boss al recibir daño, e implementé estos assets y partículas en el motor buscando siempre el rendimiento del juego. Participé en el desarrollo del mapa y su sistema de parkour. Otra parte importante en la que trabajé fue en la implementación del jefe final con sus mecánicas y estados de combate, arreglé algunos errores que tenían los enemigos y su máquina de estados, y programé el puzzle antes del jefe final.', en: 'This was the final project I presented for the video game development and interactive environments degree, created with two other teammates. I participated in creating several 3D models such as floating platforms and puzzle rocks, among others. I also created particles for enemies and the boss when taking damage, and implemented these assets and particles in the engine always aiming for game performance. I worked on the map development and its parkour system. Another important part I worked on was implementing the final boss with its mechanics and combat states, fixing some bugs in the enemies and their state machine, and programming the puzzle before the final boss.' },
+    'proyecto-1-desc': { es: 'En este juego lleno de color debes adentrarte junto a un compañero en un mundo de plataformas, donde la comunicación es clave para resolver puzzles y superar niveles con un giro que añade dificultad a cada desafío.', en: 'In this colorful game you venture alongside a partner into a platforming world, where communication is key to solving puzzles and clearing levels — with a twist that adds challenge at every turn.' },
+    'proyecto-1-rol-1': { es: 'Arte 3D', en: '3D Art' },
+    'proyecto-1-rol-1-li-1': { es: 'Creé assets y entornos tridimensionales para el juego', en: 'Created 3D assets and environments for the game' },
+    'proyecto-1-rol-1-li-2': { es: 'Modelé y texturicé personajes y escenarios', en: 'Modeled and textured characters and scenarios' },
+    'proyecto-1-rol-1-li-3': { es: 'Optimicé los modelos 3D para mejorar el rendimiento en el motor', en: 'Optimized 3D models for better engine performance' },
+    'proyecto-1-participacion': { es: 'Este proyecto fue creado para la Global Game Jam. Me encargué de todo el arte 3D, desde la creación de assets hasta la optimización de los modelos para el motor. También trabajé en la creación del entorno y el nivel.', en: 'This project was created for the Global Game Jam. I was in charge of all the 3D art, from asset creation to model optimization for the engine. I also worked on creating the environment and the level.' },
+    'proyecto-2-desc': { es: 'En este juego eres un borrachito que estuvo bebiendo toda la noche y ahora debe encontrar el camino al trabajo. Debes estar atento, porque nada es lo que parece y podrías llegar al lugar equivocado.', en: 'In this game you are a little drunk who has been drinking all night and now must find the way to work. Stay alert, because nothing is as it seems and you might end up in the wrong place.' },
+    'proyecto-2-rol-2': { es: 'Diseño de nivel', en: 'Level Design' },
+    'proyecto-2-rol-2-li-1': { es: 'Diseñé escenarios urbanos con rutas engañosas y puntos de referencia cambiantes', en: 'Designed urban scenarios with deceptive routes and shifting landmarks' },
+    'proyecto-2-rol-2-li-2': { es: 'Implementé puntos de control y elementos interactivos en el entorno', en: 'Implemented checkpoints and interactive elements in the environment' },
+    'proyecto-2-rol-3': { es: '3D Art', en: '3D Art' },
+    'proyecto-2-rol-3-li-1': { es: 'Modelé entornos urbanos y escenas para el juego', en: 'Modeled urban environments and scenes for the game' },
+    'proyecto-2-rol-3-li-2': { es: 'Texturicé los assets y optimicé los modelos para el motor', en: 'Textured the assets and optimized models for the engine' },
+    'proyecto-2-participacion': { es: 'Este proyecto fue creado para la Woman Game Jam. Participé en el modelado 3D de los entornos urbanos y en el diseño de nivel. Me centré en crear un entorno que hiciera perder al jugador pero que a la vez fuera llamativo. Trabajé estrechamente con el área de diseño 2D y animación 2D para poder llegar al producto final y al estilo que deseábamos.', en: 'This project was created for the Woman Game Jam. I participated in 3D modeling of urban environments and in level design. I focused on creating an environment that would disorient the player while still being visually striking. I worked closely with the 2D design and 2D animation team to achieve the final product and the style we wanted.' },
+    'thumbnail': { es: 'Thumbnail', en: 'Thumbnail' },
+    'links-title': { es: 'Links', en: 'Links' },
+    'links-itch-desc': { es: 'Juegos publicados', en: 'Published games' },
+    'links-github-desc': { es: 'Código y proyectos', en: 'Code & projects' },
+    'links-artstation-desc': { es: 'Portafolio 3D', en: '3D Portfolio' },
+    'links-linkedin-desc': { es: 'Perfil profesional', en: 'Professional profile' },
+    'contacto-title': { es: 'Contacto', en: 'Contact' },
+    'contacto-text': { es: '¿Tienes un proyecto en mente? Hablemos.', en: 'Have a project in mind? Let\'s talk.' },
+    'habilidades-title': { es: 'Habilidades y Programas', en: 'Skills & Software' },
+    'skill-motores': { es: 'Motores', en: 'Engines' },
+    'skill-programacion': { es: 'Programación', en: 'Programming' },
+    'skill-modelado': { es: 'Modelado 3D', en: '3D Modeling' },
+    'skill-diseno': { es: 'Diseño', en: 'Design' },
+    'skill-control-versiones': { es: 'Control de Versiones', en: 'Version Control' },
+    'skill-otros': { es: 'Otros', en: 'Other' },
+    'cv-title': { es: 'Currículum', en: 'Resume' },
+    'cv-text': { es: 'Descarga mi currículum para conocer más sobre mi experiencia y formación.', en: 'Download my resume to learn more about my experience and education.' },
+    'cv-btn': { es: 'Descargar CV', en: 'Download CV' },
+    'footer': { es: '&copy; 2026 Julián David González Quiroga — NoraJulia', en: '&copy; 2026 Julián David González Quiroga — NoraJulia' },
+  };
+
+  let currentLang = localStorage.getItem('lang') || 'es';
+
+  function applyTranslation() {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (translations[key] && translations[key][currentLang]) {
+        el.innerHTML = translations[key][currentLang];
+      }
+    });
+    document.documentElement.lang = currentLang === 'es' ? 'es' : 'en';
+    langBtn.textContent = currentLang === 'es' ? 'EN' : 'ES';
+    localStorage.setItem('lang', currentLang);
+  }
+
+  const langBtn = document.getElementById('lang-btn');
+  langBtn.addEventListener('click', () => {
+    currentLang = currentLang === 'es' ? 'en' : 'es';
+    applyTranslation();
+  });
+
+  applyTranslation();
+
+  /* ---- VIDEO MODAL ---- */
+  window.openVideo = function (id) {
+    const modal = document.getElementById('video-modal');
+    const iframe = document.getElementById('video-iframe');
+    iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  window.closeVideo = function () {
+    const modal = document.getElementById('video-modal');
+    const iframe = document.getElementById('video-iframe');
+    iframe.src = '';
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
   /* ---- MOBILE NAV TOGGLE ---- */
   const toggle = document.getElementById('nav-toggle');
   const navLinks = document.getElementById('nav-links');
