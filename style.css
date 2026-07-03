@@ -38,7 +38,6 @@ body {
     radial-gradient(ellipse at 70% 80%, rgba(0, 255, 65, 0.05) 0%, transparent 50%),
     radial-gradient(ellipse at 50% 50%, rgba(255, 215, 0, 0.02) 0%, transparent 60%),
     linear-gradient(180deg, #000000 0%, #06060e 30%, #000000 100%);
-  background-attachment: fixed;
   color: var(--text-primary);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -258,7 +257,6 @@ body::after {
     radial-gradient(ellipse at 70% 80%, rgba(0, 255, 65, 0.08) 0%, transparent 50%),
     radial-gradient(ellipse at 50% 50%, rgba(255, 215, 0, 0.03) 0%, transparent 60%),
     linear-gradient(180deg, #000000 0%, #0d001a 30%, #001a05 60%, #000000 100%);
-  background-attachment: fixed;
 }
 
 #eye-canvas {
@@ -900,6 +898,15 @@ body::after {
   border-color: #c084fc;
   color: var(--text-primary);
   background: rgba(92, 14, 140, 0.06);
+}
+
+@media (hover: hover) {
+  body {
+    background-attachment: fixed;
+  }
+  .hero {
+    background-attachment: fixed;
+  }
 }
 
 @media (max-width: 768px) {
