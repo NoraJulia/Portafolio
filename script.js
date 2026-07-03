@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'nav-sobre-mi': { es: 'Sobre mí', en: 'About me' },
     'nav-proyectos': { es: 'Proyectos', en: 'Projects' },
     'nav-links': { es: 'Links', en: 'Links' },
+    'nav-habilidades': { es: 'Habilidades', en: 'Skills' },
     'nav-contacto': { es: 'Contacto', en: 'Contact' },
     'nav-cv': { es: 'CV', en: 'CV' },
     'hero-tagline': { es: 'Game Developer | JR 3D Character Artist | JR 3D Environment Artist', en: 'Game Developer | JR 3D Character Artist | JR 3D Environment Artist' },
