@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'skill-otros': { es: 'Otros', en: 'Other' },
     'cv-title': { es: 'Currículum', en: 'Resume' },
     'cv-text': { es: 'Descarga mi currículum para conocer más sobre mi experiencia y formación.', en: 'Download my resume to learn more about my experience and education.' },
+    'participacion-heading': { es: 'Mi participación', en: 'My role' },
     'cv-btn': { es: 'Descargar CV', en: 'Download CV' },
     'footer': { es: '&copy; 2026 Julián David González Quiroga — NoraJulia', en: '&copy; 2026 Julián David González Quiroga — NoraJulia' },
   };
