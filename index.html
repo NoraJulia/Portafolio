@@ -70,49 +70,111 @@
 
         <div class="proyecto-selector">
           <button class="proyecto-tab active" data-tab="0">
+            <span class="proyecto-tab-logo"><img src="assets/TheDreamStalker_Initial.png" alt="THE DREAM STALKER" style="width:100%;height:100%;border-radius:50%;object-fit:cover;"></span>
+            <span class="proyecto-tab-name" data-i18n="proyecto-0-name">THE DREAM STALKER</span>
+          </button>
+          <button class="proyecto-tab" data-tab="1">
             <span class="proyecto-tab-logo"><img src="assets/Warden of forest.png" alt="Warden Of Forest" style="width:100%;height:100%;border-radius:50%;object-fit:cover;"></span>
             <span class="proyecto-tab-name">Warden of Forest</span>
           </button>
-          <button class="proyecto-tab" data-tab="1">
+          <button class="proyecto-tab" data-tab="2">
             <span class="proyecto-tab-logo"><img src="assets/swappy-and-switch.jpeg" alt="Swappy and Switch" style="width:100%;height:100%;border-radius:50%;object-fit:cover;"></span>
             <span class="proyecto-tab-name">Swappy and Switch</span>
           </button>
-          <button class="proyecto-tab" data-tab="2">
+          <button class="proyecto-tab" data-tab="3">
             <span class="proyecto-tab-logo"><img src="assets/last-shot-i-swear.png" alt="Last Shot, I Swear" style="width:100%;height:100%;border-radius:50%;object-fit:cover;"></span>
             <span class="proyecto-tab-name">Last Shot, I Swear</span>
           </button>
         </div>
 
+        <div class="proyecto-loading-bar" id="proyecto-loading-bar">
+          <div class="plb-line"></div>
+          <div class="plb-inner">
+            <img class="plb-logo" id="plb-logo" src="" alt="">
+            <span class="plb-header">/// Nora-System ////</span>
+            <div class="plb-bar">
+              <span class="plb-bar-fill"></span>
+            </div>
+            <span class="plb-label" data-i18n="loader-transfer">TRANSFIRIENDO DATOS...</span>
+          </div>
+          <div class="plb-line"></div>
+        </div>
+
         <div class="proyecto-panels">
           <article class="proyecto-panel active" data-panel="0">
-              <h3>Warden of Forest <span class="proyecto-year">(2024)</span></h3>
+              <h3 data-i18n="proyecto-0-name">THE DREAM STALKER <span class="proyecto-year"></span></h3>
               <div class="proyecto-tags">
               </div>
-              <p data-i18n="proyecto-0-desc">En este juego te embarcas a proteger el bosque mágico que está siendo atacado por criaturas de la oscuridad que desean apagar todo el brillo de este hermoso bosque.</p>
+              <p data-i18n="proyecto-0-desc">Es un tenso juego de terror ambientado dentro del sueño fracturado de un niño. Juegas como un guardián encargado de dividir un retorcido híbrido de Pesadilla y Sueño. Acechado por Mothroach — una grotesca mezcla de tus peores fobias a los insectos y el engañoso pelaje de una polilla bebé — debes buscar pilas para la linterna, mantener a la criatura a raya y desentrañar las dos partes opuestas del monstruo. Purifica ambas mitades para sanar el sueño y salvar al niño dormido antes de que la pesadilla lo devore por completo.</p>
             <div class="proyecto-panel-inner">
               <div class="proyecto-content">
                 <h4 class="proyecto-rol-heading" data-i18n="rol-heading">Rol y responsabilidades</h4>
                 <p class="proyecto-rol-cat" data-i18n="proyecto-0-rol-1">Programación del Juego</p>
                 <ul class="proyecto-details">
-                  <li data-i18n="proyecto-0-rol-1-li-1">Programé el boss final y su sistema de combate</li>
-                  <li data-i18n="proyecto-0-rol-1-li-2">Participé en la mecánica de los enemigos y su programación</li>
-                  <li data-i18n="proyecto-0-rol-1-li-3">Programé el puzzle del juego</li>
+                  <li data-i18n="proyecto-0-rol-1-li-1">Programé el comportamiento del enemigo y sus estados</li>
+                  <li data-i18n="proyecto-0-rol-1-li-2">Ayudé con la corrección de errores en la programación del player</li>
                 </ul>
-                <p class="proyecto-rol-cat" data-i18n="proyecto-0-rol-2">Diseño de nivel</p>
+                <p class="proyecto-rol-cat" data-i18n="proyecto-0-rol-2">Diseño del videojuego</p>
                 <ul class="proyecto-details">
-                  <li data-i18n="proyecto-0-rol-2-li-1">Diseñé y agregué una parte del bosque mágico</li>
-                  <li data-i18n="proyecto-0-rol-2-li-2">Diseñé el puzzle y lo implementé</li>
-                </ul>
-                <p class="proyecto-rol-cat" data-i18n="proyecto-0-rol-3">Arte 3D</p>
-                <ul class="proyecto-details">
-                  <li data-i18n="proyecto-0-rol-3-li-1">Modelé las plataformas</li>
-                  <li data-i18n="proyecto-0-rol-3-li-2">Modelé las piedras de los puzzles</li>
-                  <li data-i18n="proyecto-0-rol-3-li-3">Creé las partículas de los enemigos e implementé todo al motor</li>
+                  <li data-i18n="proyecto-0-rol-2-li-1">Ayudé a crear la idea del juego</li>
+                  <li data-i18n="proyecto-0-rol-2-li-2">Ayudé a pensar el funcionamiento del enemigo</li>
                 </ul>
               </div>
               <aside class="proyecto-participacion">
                 <h4>Mi participación</h4>
-                <p data-i18n="proyecto-0-participacion">Este fue el proyecto final que presenté para la carrera de desarrollo de videojuegos y entornos interactivos, creado con otros dos compañeros. Participé en la creación de varios modelos 3D como las plataformas flotantes y las rocas de los puzzles, entre otros. También creé partículas como las de los enemigos y el boss al recibir daño, e implementé estos assets y partículas en el motor buscando siempre el rendimiento del juego. Participé en el desarrollo del mapa y su sistema de parkour. Otra parte importante en la que trabajé fue en la implementación del jefe final con sus mecánicas y estados de combate, arreglé algunos errores que tenían los enemigos y su máquina de estados, y programé el puzzle antes del jefe final.</p>
+                <p data-i18n="proyecto-0-participacion">Este fue el proyecto que presenté para la Game Jam interna de Generation, creado junto a otros 3 compañeros. Me encargué de programar el comportamiento del enemigo y sus estados; fue un reto para mí ya que no he tenido muchas oportunidades de programar máquinas de estados. Aunque actualmente me quiero desarrollar más en el área del arte, decidí asumir este desafío por gusto propio.</p>
+              </aside>
+            </div>
+            <div class="proyecto-media">
+              <div class="media-grid">
+                <div class="media-item media-video">
+                  <img src="https://img.youtube.com/vi/lhU1LwwfhMU/maxresdefault.jpg" alt="THE DREAM STALKER video" class="media-img">
+                  <a href="https://www.youtube.com/watch?v=lhU1LwwfhMU" target="_blank" rel="noopener noreferrer" class="media-play-btn" aria-label="Ver video" onclick="event.preventDefault(); openVideo('lhU1LwwfhMU')">
+                    <i class="fas fa-play"></i>
+                  </a>
+                </div>
+                <div class="media-item media-image">
+                  <img src="assets/TheDreamStalker_Imagen_Gameplay_1.png" alt="THE DREAM STALKER gameplay 1" class="media-img">
+                </div>
+                <div class="media-item media-image">
+                  <img src="assets/TheDreamStalker_Imagen_Gameplay_2.png" alt="THE DREAM STALKER gameplay 2" class="media-img">
+                </div>
+                <div class="media-item media-image">
+                  <img src="assets/TheDreamStalker_Imagen_Gameplay_3.png" alt="THE DREAM STALKER gameplay 3" class="media-img">
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="proyecto-panel" data-panel="1">
+              <h3>Warden of Forest <span class="proyecto-year">(2024)</span></h3>
+              <div class="proyecto-tags">
+              </div>
+              <p data-i18n="proyecto-1-desc">En este juego te embarcas a proteger el bosque mágico que está siendo atacado por criaturas de la oscuridad que desean apagar todo el brillo de este hermoso bosque.</p>
+            <div class="proyecto-panel-inner">
+              <div class="proyecto-content">
+                <h4 class="proyecto-rol-heading" data-i18n="rol-heading">Rol y responsabilidades</h4>
+                <p class="proyecto-rol-cat" data-i18n="proyecto-1-rol-1">Programación del Juego</p>
+                <ul class="proyecto-details">
+                  <li data-i18n="proyecto-1-rol-1-li-1">Programé el boss final y su sistema de combate</li>
+                  <li data-i18n="proyecto-1-rol-1-li-2">Participé en la mecánica de los enemigos y su programación</li>
+                  <li data-i18n="proyecto-1-rol-1-li-3">Programé el puzzle del juego</li>
+                </ul>
+                <p class="proyecto-rol-cat" data-i18n="proyecto-1-rol-2">Diseño de nivel</p>
+                <ul class="proyecto-details">
+                  <li data-i18n="proyecto-1-rol-2-li-1">Diseñé y agregué una parte del bosque mágico</li>
+                  <li data-i18n="proyecto-1-rol-2-li-2">Diseñé el puzzle y lo implementé</li>
+                </ul>
+                <p class="proyecto-rol-cat" data-i18n="proyecto-1-rol-3">Arte 3D</p>
+                <ul class="proyecto-details">
+                  <li data-i18n="proyecto-1-rol-3-li-1">Modelé las plataformas</li>
+                  <li data-i18n="proyecto-1-rol-3-li-2">Modelé las piedras de los puzzles</li>
+                  <li data-i18n="proyecto-1-rol-3-li-3">Creé las partículas de los enemigos e implementé todo al motor</li>
+                </ul>
+              </div>
+              <aside class="proyecto-participacion">
+                <h4>Mi participación</h4>
+                <p data-i18n="proyecto-1-participacion">Este fue el proyecto final que presenté para la carrera de desarrollo de videojuegos y entornos interactivos, creado con otros dos compañeros. Participé en la creación de varios modelos 3D como las plataformas flotantes y las rocas de los puzzles, entre otros. También creé partículas como las de los enemigos y el boss al recibir daño, e implementé estos assets y partículas en el motor buscando siempre el rendimiento del juego. Participé en el desarrollo del mapa y su sistema de parkour. Otra parte importante en la que trabajé fue en la implementación del jefe final con sus mecánicas y estados de combate, arreglé algunos errores que tenían los enemigos y su máquina de estados, y programé el puzzle antes del jefe final.</p>
               </aside>
             </div>
             <div class="proyecto-media">
@@ -133,24 +195,24 @@
             </div>
           </article>
 
-          <article class="proyecto-panel" data-panel="1">
+          <article class="proyecto-panel" data-panel="2">
               <h3>Swappy and Switch <span class="proyecto-year">(2026)</span></h3>
               <div class="proyecto-tags">
               </div>
-              <p data-i18n="proyecto-1-desc">En este juego lleno de color debes adentrarte junto a un compañero en un mundo de plataformas, donde la comunicación es clave para resolver puzzles y superar niveles con un giro que añade dificultad a cada desafío.</p>
+              <p data-i18n="proyecto-2-desc">En este juego lleno de color debes adentrarte junto a un compañero en un mundo de plataformas, donde la comunicación es clave para resolver puzzles y superar niveles con un giro que añade dificultad a cada desafío.</p>
             <div class="proyecto-panel-inner">
               <div class="proyecto-content">
                 <h4 class="proyecto-rol-heading" data-i18n="rol-heading">Rol y responsabilidades</h4>
-                <p class="proyecto-rol-cat" data-i18n="proyecto-1-rol-1">Arte 3D</p>
+                <p class="proyecto-rol-cat" data-i18n="proyecto-2-rol-1">Arte 3D</p>
                 <ul class="proyecto-details">
-                  <li data-i18n="proyecto-1-rol-1-li-1">Creé assets y entornos tridimensionales para el juego</li>
-                  <li data-i18n="proyecto-1-rol-1-li-2">Modelé y texturicé personajes y escenarios</li>
-                  <li data-i18n="proyecto-1-rol-1-li-3">Optimicé los modelos 3D para mejorar el rendimiento en el motor</li>
+                  <li data-i18n="proyecto-2-rol-1-li-1">Creé assets y entornos tridimensionales para el juego</li>
+                  <li data-i18n="proyecto-2-rol-1-li-2">Modelé y texturicé personajes y escenarios</li>
+                  <li data-i18n="proyecto-2-rol-1-li-3">Optimicé los modelos 3D para mejorar el rendimiento en el motor</li>
                 </ul>
               </div>
               <aside class="proyecto-participacion">
                 <h4>Mi participación</h4>
-                <p data-i18n="proyecto-1-participacion">Este proyecto fue creado para la Global Game Jam. Me encargué de todo el arte 3D, desde la creación de assets hasta la optimización de los modelos para el motor. También trabajé en la creación del entorno y el nivel.</p>
+                <p data-i18n="proyecto-2-participacion">Este proyecto fue creado para la Global Game Jam. Me encargué de todo el arte 3D, desde la creación de assets hasta la optimización de los modelos para el motor. También trabajé en la creación del entorno y el nivel.</p>
               </aside>
             </div>
             <div class="proyecto-media">
@@ -168,28 +230,28 @@
             </div>
           </article>
 
-          <article class="proyecto-panel" data-panel="2">
+          <article class="proyecto-panel" data-panel="3">
               <h3>Last Shot, I Swear <span class="proyecto-year">(2025)</span></h3>
               <div class="proyecto-tags">
               </div>
-              <p data-i18n="proyecto-2-desc">En este juego eres un borrachito que estuvo bebiendo toda la noche y ahora debe encontrar el camino al trabajo. Debes estar atento, porque nada es lo que parece y podrías llegar al lugar equivocado.</p>
+              <p data-i18n="proyecto-3-desc">En este juego eres un borrachito que estuvo bebiendo toda la noche y ahora debe encontrar el camino al trabajo. Debes estar atento, porque nada es lo que parece y podrías llegar al lugar equivocado.</p>
             <div class="proyecto-panel-inner">
               <div class="proyecto-content">
                 <h4 class="proyecto-rol-heading" data-i18n="rol-heading">Rol y responsabilidades</h4>
-                <p class="proyecto-rol-cat" data-i18n="proyecto-2-rol-2">Level Design</p>
+                <p class="proyecto-rol-cat" data-i18n="proyecto-3-rol-2">Level Design</p>
                 <ul class="proyecto-details">
-                  <li data-i18n="proyecto-2-rol-2-li-1">Diseñé escenarios urbanos con rutas engañosas y puntos de referencia cambiantes</li>
-                  <li data-i18n="proyecto-2-rol-2-li-2">Implementé puntos de control y elementos interactivos en el entorno</li>
+                  <li data-i18n="proyecto-3-rol-2-li-1">Diseñé escenarios urbanos con rutas engañosas y puntos de referencia cambiantes</li>
+                  <li data-i18n="proyecto-3-rol-2-li-2">Implementé puntos de control y elementos interactivos en el entorno</li>
                 </ul>
-                <p class="proyecto-rol-cat" data-i18n="proyecto-2-rol-3">3D Art</p>
+                <p class="proyecto-rol-cat" data-i18n="proyecto-3-rol-3">3D Art</p>
                 <ul class="proyecto-details">
-                  <li data-i18n="proyecto-2-rol-3-li-1">Modelé entornos urbanos y escenas para el juego</li>
-                  <li data-i18n="proyecto-2-rol-3-li-2">Texturicé los assets y optimicé los modelos para el motor</li>
+                  <li data-i18n="proyecto-3-rol-3-li-1">Modelé entornos urbanos y escenas para el juego</li>
+                  <li data-i18n="proyecto-3-rol-3-li-2">Texturicé los assets y optimicé los modelos para el motor</li>
                 </ul>
               </div>
               <aside class="proyecto-participacion">
                 <h4>Mi participación</h4>
-                <p data-i18n="proyecto-2-participacion">Este proyecto fue creado para la Woman Game Jam. Participé en el modelado 3D de los entornos urbanos y en el diseño de nivel. Me centré en crear un entorno que hiciera perder al jugador pero que a la vez fuera llamativo. Trabajé estrechamente con el área de diseño 2D y animación 2D para poder llegar al producto final y al estilo que deseábamos.</p>
+                <p data-i18n="proyecto-3-participacion">Este proyecto fue creado para la Woman Game Jam. Participé en el modelado 3D de los entornos urbanos y en el diseño de nivel. Me centré en crear un entorno que hiciera perder al jugador pero que a la vez fuera llamativo. Trabajé estrechamente con el área de diseño 2D y animación 2D para poder llegar al producto final y al estilo que deseábamos.</p>
               </aside>
             </div>
             <div class="proyecto-media">
@@ -252,7 +314,7 @@
             <div class="skill-items">
               <span class="skill-item"><span class="skill-icon-img" style="mask-image: url(assets/photoshop-logo.svg); -webkit-mask-image: url(assets/photoshop-logo.svg); width: 1.6rem; height: 1.6rem;"></span> Photoshop</span>
               <span class="skill-item"><span class="skill-icon-img" style="mask-image: url(assets/substance-painter-logo.svg); -webkit-mask-image: url(assets/substance-painter-logo.svg); width: 1.6rem; height: 1.6rem;"></span> Substance Painter 3D</span>
-              <span class="skill-item"><span class="skill-icon-img" style="mask-image: url(assets/mari-logo.svg); -webkit-mask-image: url(assets/mari-logo.svg); width: 1.4rem; height: 1.4rem;"></span> Mari</span>
+              <span class="skill-item"><span class="skill-icon-img" style="mask-image: url(assets/mari-logo.png); -webkit-mask-image: url(assets/mari-logo.png); width: 1.4rem; height: 1.4rem;"></span> Mari</span>
             </div>
           </div>
         </div>
@@ -326,6 +388,14 @@
     <div class="video-modal-content">
       <button class="video-modal-close" onclick="closeVideo()">&times;</button>
       <iframe id="video-iframe" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="img-modal" id="img-modal">
+    <div class="video-modal-overlay" onclick="closeImg()"></div>
+    <div class="img-modal-content">
+      <button class="video-modal-close" onclick="closeImg()">&times;</button>
+      <img id="img-modal-img" src="" alt="">
     </div>
   </div>
 

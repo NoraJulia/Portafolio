@@ -19,34 +19,44 @@ document.addEventListener('DOMContentLoaded', () => {
       en: 'I bring stories to life by designing immersive worlds as a video game developer and 3D artist. I currently focus my career on 3D character and environment modeling, mastering key tools for creating engaging scenarios and models ready to integrate into the game engine. I am passionate about solving the technical challenges that connect art with programming, always ensuring that visual aesthetics enhance gameplay. My goal in every project is to make sure every visual asset is as optimized as possible for the game engine, guaranteeing smooth performance and high-quality visual results.'
     },
     'proyectos-title': { es: 'Proyectos', en: 'Projects' },
+    'loader-transfer': { es: 'TRANSFIRIENDO DATOS...', en: 'TRANSFERRING DATA...' },
     'rol-heading': { es: 'Rol y responsabilidades', en: 'Role & responsibilities' },
-    'proyecto-0-desc': { es: 'En este juego te embarcas a proteger el bosque mágico que está siendo atacado por criaturas de la oscuridad que desean apagar todo el brillo de este hermoso bosque.', en: 'In this game you embark on a quest to protect the magical forest being attacked by creatures of darkness who seek to extinguish all the light of this beautiful woodland.' },
+    'proyecto-0-name': { es: 'THE DREAM STALKER', en: 'THE DREAM STALKER' },
+    'proyecto-0-desc': { es: 'Es un tenso juego de terror ambientado dentro del sueño fracturado de un niño. Juegas como un guardián encargado de dividir un retorcido híbrido de Pesadilla y Sueño. Acechado por Mothroach — una grotesca mezcla de tus peores fobias a los insectos y el engañoso pelaje de una polilla bebé — debes buscar pilas para la linterna, mantener a la criatura a raya y desentrañar las dos partes opuestas del monstruo. Purifica ambas mitades para sanar el sueño y salvar al niño dormido antes de que la pesadilla lo devore por completo.', en: 'A tense horror game set inside a child\'s fractured dream. You play as a guardian tasked with splitting a twisted hybrid of Nightmare and Dream. Stalked by Mothroach — a grotesque blend of your worst insect phobias and the deceptive fluff of a baby moth — you must scavenge for flashlight batteries, keep the creature at bay, and unravel the monster\'s two opposing fragments. Purify both halves to heal the dream and save the sleeping child before the nightmare swallows them whole.' },
     'proyecto-0-rol-1': { es: 'Programación del Juego', en: 'Game Programming' },
-    'proyecto-0-rol-1-li-1': { es: 'Programé el boss final y su sistema de combate', en: 'Programmed the final boss and its combat system' },
-    'proyecto-0-rol-1-li-2': { es: 'Participé en la mecánica de los enemigos y su programación', en: 'Worked on enemy mechanics and programming' },
-    'proyecto-0-rol-1-li-3': { es: 'Programé el puzzle del juego', en: 'Programmed the game puzzle' },
-    'proyecto-0-rol-2': { es: 'Diseño de nivel', en: 'Level Design' },
-    'proyecto-0-rol-2-li-1': { es: 'Diseñé y agregué una parte del bosque mágico', en: 'Designed and built a section of the magical forest' },
-    'proyecto-0-rol-2-li-2': { es: 'Diseñé el puzzle y lo implementé', en: 'Designed and implemented the puzzle' },
-    'proyecto-0-rol-3': { es: 'Arte 3D', en: '3D Art' },
-    'proyecto-0-rol-3-li-1': { es: 'Modelé las plataformas', en: 'Modeled the platforms' },
-    'proyecto-0-rol-3-li-2': { es: 'Modelé las piedras de los puzzles', en: 'Modeled the puzzle stones' },
-    'proyecto-0-rol-3-li-3': { es: 'Creé las partículas de los enemigos e implementé todo al motor', en: 'Created enemy particles and implemented everything in the engine' },
-    'proyecto-0-participacion': { es: 'Este fue el proyecto final que presenté para la carrera de desarrollo de videojuegos y entornos interactivos, creado con otros dos compañeros. Participé en la creación de varios modelos 3D como las plataformas flotantes y las rocas de los puzzles, entre otros. También creé partículas como las de los enemigos y el boss al recibir daño, e implementé estos assets y partículas en el motor buscando siempre el rendimiento del juego. Participé en el desarrollo del mapa y su sistema de parkour. Otra parte importante en la que trabajé fue en la implementación del jefe final con sus mecánicas y estados de combate, arreglé algunos errores que tenían los enemigos y su máquina de estados, y programé el puzzle antes del jefe final.', en: 'This was the final project I presented for the video game development and interactive environments degree, created with two other teammates. I participated in creating several 3D models such as floating platforms and puzzle rocks, among others. I also created particles for enemies and the boss when taking damage, and implemented these assets and particles in the engine always aiming for game performance. I worked on the map development and its parkour system. Another important part I worked on was implementing the final boss with its mechanics and combat states, fixing some bugs in the enemies and their state machine, and programming the puzzle before the final boss.' },
-    'proyecto-1-desc': { es: 'En este juego lleno de color debes adentrarte junto a un compañero en un mundo de plataformas, donde la comunicación es clave para resolver puzzles y superar niveles con un giro que añade dificultad a cada desafío.', en: 'In this colorful game you venture alongside a partner into a platforming world, where communication is key to solving puzzles and clearing levels — with a twist that adds challenge at every turn.' },
-    'proyecto-1-rol-1': { es: 'Arte 3D', en: '3D Art' },
-    'proyecto-1-rol-1-li-1': { es: 'Creé assets y entornos tridimensionales para el juego', en: 'Created 3D assets and environments for the game' },
-    'proyecto-1-rol-1-li-2': { es: 'Modelé y texturicé personajes y escenarios', en: 'Modeled and textured characters and scenarios' },
-    'proyecto-1-rol-1-li-3': { es: 'Optimicé los modelos 3D para mejorar el rendimiento en el motor', en: 'Optimized 3D models for better engine performance' },
-    'proyecto-1-participacion': { es: 'Este proyecto fue creado para la Global Game Jam. Me encargué de todo el arte 3D, desde la creación de assets hasta la optimización de los modelos para el motor. También trabajé en la creación del entorno y el nivel.', en: 'This project was created for the Global Game Jam. I was in charge of all the 3D art, from asset creation to model optimization for the engine. I also worked on creating the environment and the level.' },
-    'proyecto-2-desc': { es: 'En este juego eres un borrachito que estuvo bebiendo toda la noche y ahora debe encontrar el camino al trabajo. Debes estar atento, porque nada es lo que parece y podrías llegar al lugar equivocado.', en: 'In this game you are a little drunk who has been drinking all night and now must find the way to work. Stay alert, because nothing is as it seems and you might end up in the wrong place.' },
-    'proyecto-2-rol-2': { es: 'Level Design', en: 'Level Design' },
-    'proyecto-2-rol-2-li-1': { es: 'Diseñé escenarios urbanos con rutas engañosas y puntos de referencia cambiantes', en: 'Designed urban scenarios with deceptive routes and shifting landmarks' },
-    'proyecto-2-rol-2-li-2': { es: 'Implementé puntos de control y elementos interactivos en el entorno', en: 'Implemented checkpoints and interactive elements in the environment' },
-    'proyecto-2-rol-3': { es: '3D Art', en: '3D Art' },
-    'proyecto-2-rol-3-li-1': { es: 'Modelé entornos urbanos y escenas para el juego', en: 'Modeled urban environments and scenes for the game' },
-    'proyecto-2-rol-3-li-2': { es: 'Texturicé los assets y optimicé los modelos para el motor', en: 'Textured the assets and optimized models for the engine' },
-    'proyecto-2-participacion': { es: 'Este proyecto fue creado para la Woman Game Jam. Participé en el modelado 3D de los entornos urbanos y en el diseño de nivel. Me centré en crear un entorno que hiciera perder al jugador pero que a la vez fuera llamativo. Trabajé estrechamente con el área de diseño 2D y animación 2D para poder llegar al producto final y al estilo que deseábamos.', en: 'This project was created for the Woman Game Jam. I participated in 3D modeling of urban environments and in level design. I focused on creating an environment that would disorient the player while still being visually striking. I worked closely with the 2D design and 2D animation team to achieve the final product and the style we wanted.' },
+    'proyecto-0-rol-1-li-1': { es: 'Programé el comportamiento del enemigo y sus estados', en: 'I programmed the enemy behavior and its states' },
+    'proyecto-0-rol-1-li-2': { es: 'Ayudé con la corrección de errores en la programación del player', en: 'Helped fix bugs in the player programming' },
+    'proyecto-0-rol-2': { es: 'Diseño del videojuego', en: 'Game Design' },
+    'proyecto-0-rol-2-li-1': { es: 'Ayudé a crear la idea del juego', en: 'Helped conceive the game idea' },
+    'proyecto-0-rol-2-li-2': { es: 'Ayudé a pensar el funcionamiento del enemigo', en: 'Helped think through the enemy\'s behavior' },
+    'proyecto-0-participacion': { es: 'Este fue el proyecto que presenté para la Game Jam interna de Generation, creado junto a otros 3 compañeros. Me encargué de programar el comportamiento del enemigo y sus estados; fue un reto para mí ya que no he tenido muchas oportunidades de programar máquinas de estados. Aunque actualmente me quiero desarrollar más en el área del arte, decidí asumir este desafío por gusto propio.', en: 'This was the project I presented for Generation\'s internal Game Jam, created with 3 other teammates. I was in charge of programming the enemy behavior and its states; it was a challenge for me since I haven\'t had many opportunities to program state machines. Although I currently want to develop more in the art area, I decided to take on this challenge by choice.' },
+    'proyecto-1-desc': { es: 'En este juego te embarcas a proteger el bosque mágico que está siendo atacado por criaturas de la oscuridad que desean apagar todo el brillo de este hermoso bosque.', en: 'In this game you embark on a quest to protect the magical forest being attacked by creatures of darkness who seek to extinguish all the light of this beautiful woodland.' },
+    'proyecto-1-rol-1': { es: 'Programación del Juego', en: 'Game Programming' },
+    'proyecto-1-rol-1-li-1': { es: 'Programé el boss final y su sistema de combate', en: 'Programmed the final boss and its combat system' },
+    'proyecto-1-rol-1-li-2': { es: 'Participé en la mecánica de los enemigos y su programación', en: 'Worked on enemy mechanics and programming' },
+    'proyecto-1-rol-1-li-3': { es: 'Programé el puzzle del juego', en: 'Programmed the game puzzle' },
+    'proyecto-1-rol-2': { es: 'Diseño de nivel', en: 'Level Design' },
+    'proyecto-1-rol-2-li-1': { es: 'Diseñé y agregué una parte del bosque mágico', en: 'Designed and built a section of the magical forest' },
+    'proyecto-1-rol-2-li-2': { es: 'Diseñé el puzzle y lo implementé', en: 'Designed and implemented the puzzle' },
+    'proyecto-1-rol-3': { es: 'Arte 3D', en: '3D Art' },
+    'proyecto-1-rol-3-li-1': { es: 'Modelé las plataformas', en: 'Modeled the platforms' },
+    'proyecto-1-rol-3-li-2': { es: 'Modelé las piedras de los puzzles', en: 'Modeled the puzzle stones' },
+    'proyecto-1-rol-3-li-3': { es: 'Creé las partículas de los enemigos e implementé todo al motor', en: 'Created enemy particles and implemented everything in the engine' },
+    'proyecto-1-participacion': { es: 'Este fue el proyecto final que presenté para la carrera de desarrollo de videojuegos y entornos interactivos, creado con otros dos compañeros. Participé en la creación de varios modelos 3D como las plataformas flotantes y las rocas de los puzzles, entre otros. También creé partículas como las de los enemigos y el boss al recibir daño, e implementé estos assets y partículas en el motor buscando siempre el rendimiento del juego. Participé en el desarrollo del mapa y su sistema de parkour. Otra parte importante en la que trabajé fue en la implementación del jefe final con sus mecánicas y estados de combate, arreglé algunos errores que tenían los enemigos y su máquina de estados, y programé el puzzle antes del jefe final.', en: 'This was the final project I presented for the video game development and interactive environments degree, created with two other teammates. I participated in creating several 3D models such as floating platforms and puzzle rocks, among others. I also created particles for enemies and the boss when taking damage, and implemented these assets and particles in the engine always aiming for game performance. I worked on the map development and its parkour system. Another important part I worked on was implementing the final boss with its mechanics and combat states, fixing some bugs in the enemies and their state machine, and programming the puzzle before the final boss.' },
+    'proyecto-2-desc': { es: 'En este juego lleno de color debes adentrarte junto a un compañero en un mundo de plataformas, donde la comunicación es clave para resolver puzzles y superar niveles con un giro que añade dificultad a cada desafío.', en: 'In this colorful game you venture alongside a partner into a platforming world, where communication is key to solving puzzles and clearing levels — with a twist that adds challenge at every turn.' },
+    'proyecto-2-rol-1': { es: 'Arte 3D', en: '3D Art' },
+    'proyecto-2-rol-1-li-1': { es: 'Creé assets y entornos tridimensionales para el juego', en: 'Created 3D assets and environments for the game' },
+    'proyecto-2-rol-1-li-2': { es: 'Modelé y texturicé personajes y escenarios', en: 'Modeled and textured characters and scenarios' },
+    'proyecto-2-rol-1-li-3': { es: 'Optimicé los modelos 3D para mejorar el rendimiento en el motor', en: 'Optimized 3D models for better engine performance' },
+    'proyecto-2-participacion': { es: 'Este proyecto fue creado para la Global Game Jam. Me encargué de todo el arte 3D, desde la creación de assets hasta la optimización de los modelos para el motor. También trabajé en la creación del entorno y el nivel.', en: 'This project was created for the Global Game Jam. I was in charge of all the 3D art, from asset creation to model optimization for the engine. I also worked on creating the environment and the level.' },
+    'proyecto-3-desc': { es: 'En este juego eres un borrachito que estuvo bebiendo toda la noche y ahora debe encontrar el camino al trabajo. Debes estar atento, porque nada es lo que parece y podrías llegar al lugar equivocado.', en: 'In this game you are a little drunk who has been drinking all night and now must find the way to work. Stay alert, because nothing is as it seems and you might end up in the wrong place.' },
+    'proyecto-3-rol-2': { es: 'Level Design', en: 'Level Design' },
+    'proyecto-3-rol-2-li-1': { es: 'Diseñé escenarios urbanos con rutas engañosas y puntos de referencia cambiantes', en: 'Designed urban scenarios with deceptive routes and shifting landmarks' },
+    'proyecto-3-rol-2-li-2': { es: 'Implementé puntos de control y elementos interactivos en el entorno', en: 'Implemented checkpoints and interactive elements in the environment' },
+    'proyecto-3-rol-3': { es: '3D Art', en: '3D Art' },
+    'proyecto-3-rol-3-li-1': { es: 'Modelé entornos urbanos y escenas para el juego', en: 'Modeled urban environments and scenes for the game' },
+    'proyecto-3-rol-3-li-2': { es: 'Texturicé los assets y optimicé los modelos para el motor', en: 'Textured the assets and optimized models for the engine' },
+    'proyecto-3-participacion': { es: 'Este proyecto fue creado para la Woman Game Jam. Participé en el modelado 3D de los entornos urbanos y en el diseño de nivel. Me centré en crear un entorno que hiciera perder al jugador pero que a la vez fuera llamativo. Trabajé estrechamente con el área de diseño 2D y animación 2D para poder llegar al producto final y al estilo que deseábamos.', en: 'This project was created for the Woman Game Jam. I participated in 3D modeling of urban environments and in level design. I focused on creating an environment that would disorient the player while still being visually striking. I worked closely with the 2D design and 2D animation team to achieve the final product and the style we wanted.' },
     'thumbnail': { es: 'Thumbnail', en: 'Thumbnail' },
     'links-title': { es: 'Links', en: 'Links' },
     'links-itch-desc': { es: 'Juegos publicados', en: 'Published games' },
@@ -106,6 +116,32 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.classList.remove('open');
     document.body.style.overflow = '';
   };
+
+  /* ---- IMAGE MODAL ---- */
+  window.openImg = function (src, alt) {
+    const modal = document.getElementById('img-modal');
+    const img = document.getElementById('img-modal-img');
+    img.src = src;
+    img.alt = alt || '';
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  window.closeImg = function () {
+    const modal = document.getElementById('img-modal');
+    document.getElementById('img-modal-img').src = '';
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  document.querySelectorAll('.media-image').forEach(el => {
+    el.addEventListener('click', () => {
+      const img = el.querySelector('.media-img');
+      if (img) {
+        openImg(img.src, img.alt);
+      }
+    });
+  });
 
   /* ---- MOBILE NAV TOGGLE ---- */
   const toggle = document.getElementById('nav-toggle');
@@ -178,6 +214,22 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---- PROYECTO TABS ---- */
   const tabs = document.querySelectorAll('.proyecto-tab');
   const panels = document.querySelectorAll('.proyecto-panel');
+  const loadingBar = document.getElementById('proyecto-loading-bar');
+  const plbLogo = document.getElementById('plb-logo');
+
+  const panelTexts = new Map();
+  panels.forEach(panel => {
+    const walker = document.createTreeWalker(panel, NodeFilter.SHOW_TEXT, null, false);
+    const texts = [];
+    while (walker.nextNode()) {
+      const node = walker.currentNode;
+      const t = node.textContent;
+      if (t.trim().length > 0) {
+        texts.push({ node, original: t });
+      }
+    }
+    panelTexts.set(panel, texts);
+  });
 
   let switching = false;
 
@@ -189,15 +241,53 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!activePanel || activePanel.dataset.panel === idx) return;
 
       switching = true;
-      activePanel.classList.add('fade-out');
+
+      const tabLogo = tab.querySelector('.proyecto-tab-logo img');
+      if (tabLogo) {
+        plbLogo.src = tabLogo.src;
+        plbLogo.alt = tabLogo.alt;
+      }
+
+      loadingBar.classList.add('active');
+
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      panels.forEach(p => p.classList.remove('active'));
+      const newPanel = document.querySelector(`.proyecto-panel[data-panel="${idx}"]`);
+      newPanel.classList.add('active');
+
+      const texts = panelTexts.get(newPanel);
+      const totalChars = texts.reduce((sum, t) => sum + t.original.length, 0);
+
+      texts.forEach(t => { t.node.textContent = ''; });
+
+      let written = 0;
+      const start = performance.now();
+      const DURATION = 1200;
+
+      function frame() {
+        const elapsed = performance.now() - start;
+        const progress = Math.min(elapsed / DURATION, 1);
+        const target = Math.floor(progress * totalChars);
+
+        let n = 0;
+        for (const t of texts) {
+          const avail = Math.max(0, Math.min(t.original.length, target - n));
+          t.node.textContent = avail > 0 ? t.original.slice(0, avail) : '';
+          n += t.original.length;
+          if (n >= target) break;
+        }
+        written = target;
+
+        if (written < totalChars) requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
 
       setTimeout(() => {
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        panels.forEach(p => p.classList.remove('active', 'fade-out'));
-        document.querySelector(`.proyecto-panel[data-panel="${idx}"]`).classList.add('active');
+        loadingBar.classList.remove('active');
         switching = false;
-      }, 280);
+      }, 900);
     });
   });
 
