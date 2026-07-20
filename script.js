@@ -101,8 +101,63 @@ document.addEventListener('DOMContentLoaded', () => {
 
   applyTranslation();
 
+  /* ---- GALLERY (shared state for image/video navigation) ---- */
+  let galleryItems = [];
+  let galleryIndex = -1;
+
+  function buildGallery() {
+    const panel = document.querySelector('.proyecto-panel.active');
+    if (!panel) return [];
+    const items = [];
+    panel.querySelectorAll('.media-item').forEach(el => {
+      const img = el.querySelector('.media-img');
+      if (!img) return;
+      const isVideo = el.classList.contains('media-video');
+      const entry = { type: isVideo ? 'video' : 'image', src: img.src, alt: img.alt, videoId: null };
+      if (isVideo) {
+        const btn = el.querySelector('.media-play-btn');
+        if (btn) {
+          const m = btn.getAttribute('onclick').match(/openVideo\('([^']+)'\)/);
+          if (m) entry.videoId = m[1];
+        }
+      }
+      items.push(entry);
+    });
+    return items;
+  }
+
+  function showGalleryItem(index) {
+    const item = galleryItems[index];
+    if (!item) return;
+    galleryIndex = index;
+
+    if (item.type === 'image') {
+      document.getElementById('video-modal').classList.remove('open');
+      document.getElementById('video-iframe').src = '';
+      const img = document.getElementById('img-modal-img');
+      img.src = item.src;
+      img.alt = item.alt;
+      document.getElementById('img-modal').classList.add('open');
+    } else {
+      document.getElementById('img-modal').classList.remove('open');
+      document.getElementById('img-modal-img').src = '';
+      const iframe = document.getElementById('video-iframe');
+      iframe.src = `https://www.youtube.com/embed/${item.videoId}?autoplay=1`;
+      document.getElementById('video-modal').classList.add('open');
+    }
+    document.body.style.overflow = 'hidden';
+  }
+
+  window.navMedia = function (dir) {
+    if (galleryItems.length === 0) return;
+    const newIndex = (galleryIndex + dir + galleryItems.length) % galleryItems.length;
+    showGalleryItem(newIndex);
+  };
+
   /* ---- VIDEO MODAL ---- */
   window.openVideo = function (id) {
+    galleryItems = buildGallery();
+    galleryIndex = galleryItems.findIndex(i => i.type === 'video' && i.videoId === id);
     const modal = document.getElementById('video-modal');
     const iframe = document.getElementById('video-iframe');
     iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
@@ -111,15 +166,15 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   window.closeVideo = function () {
-    const modal = document.getElementById('video-modal');
-    const iframe = document.getElementById('video-iframe');
-    iframe.src = '';
-    modal.classList.remove('open');
+    document.getElementById('video-modal').classList.remove('open');
+    document.getElementById('video-iframe').src = '';
     document.body.style.overflow = '';
   };
 
   /* ---- IMAGE MODAL ---- */
   window.openImg = function (src, alt) {
+    galleryItems = buildGallery();
+    galleryIndex = galleryItems.findIndex(i => i.type === 'image' && i.src === src);
     const modal = document.getElementById('img-modal');
     const img = document.getElementById('img-modal-img');
     img.src = src;
@@ -129,9 +184,8 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   window.closeImg = function () {
-    const modal = document.getElementById('img-modal');
+    document.getElementById('img-modal').classList.remove('open');
     document.getElementById('img-modal-img').src = '';
-    modal.classList.remove('open');
     document.body.style.overflow = '';
   };
 
@@ -139,10 +193,64 @@ document.addEventListener('DOMContentLoaded', () => {
     el.addEventListener('click', () => {
       const img = el.querySelector('.media-img');
       if (img) {
-        openImg(img.src, img.alt);
+        const items = buildGallery();
+        const idx = items.findIndex(i => i.type === 'image' && i.src === img.src);
+        if (idx !== -1) {
+          galleryItems = items;
+          showGalleryItem(idx);
+        }
       }
     });
   });
+
+  document.addEventListener('keydown', e => {
+    const imgOpen = document.getElementById('img-modal').classList.contains('open');
+    const vidOpen = document.getElementById('video-modal').classList.contains('open');
+    if (!imgOpen && !vidOpen) return;
+    if (e.key === 'ArrowLeft') { e.preventDefault(); navMedia(-1); }
+    else if (e.key === 'ArrowRight') { e.preventDefault(); navMedia(1); }
+    else if (e.key === 'Escape') {
+      if (imgOpen) closeImg();
+      if (vidOpen) closeVideo();
+    }
+  });
+
+  /* ---- MEDIA GRID SCROLL ---- */
+  function setupMediaScroll() {
+    document.querySelectorAll('.media-grid').forEach(grid => {
+      const parent = grid.closest('.proyecto-media');
+      if (!parent) return;
+
+      const leftBtn = document.createElement('button');
+      leftBtn.className = 'media-scroll-btn media-scroll-left';
+      leftBtn.innerHTML = '‹';
+      leftBtn.setAttribute('aria-label', 'Scroll left');
+
+      const rightBtn = document.createElement('button');
+      rightBtn.className = 'media-scroll-btn media-scroll-right';
+      rightBtn.innerHTML = '›';
+      rightBtn.setAttribute('aria-label', 'Scroll right');
+
+      parent.appendChild(leftBtn);
+      parent.appendChild(rightBtn);
+
+      function update() {
+        const manyItems = grid.children.length > 4;
+        const atStart = grid.scrollLeft <= 2;
+        const atEnd = grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 2;
+        leftBtn.classList.toggle('visible', manyItems && !atStart);
+        rightBtn.classList.toggle('visible', manyItems && !atEnd);
+      }
+
+      leftBtn.addEventListener('click', () => grid.scrollBy({ left: -grid.clientWidth * 0.75, behavior: 'smooth' }));
+      rightBtn.addEventListener('click', () => grid.scrollBy({ left: grid.clientWidth * 0.75, behavior: 'smooth' }));
+      grid.addEventListener('scroll', update);
+      window.addEventListener('resize', update);
+      new ResizeObserver(() => update()).observe(grid);
+      update();
+    });
+  }
+  setupMediaScroll();
 
   /* ---- MOBILE NAV TOGGLE ---- */
   const toggle = document.getElementById('nav-toggle');
