@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'nav-habilidades': { es: 'Habilidades', en: 'Skills' },
     'nav-contacto': { es: 'Contacto', en: 'Contact' },
     'nav-cv': { es: 'CV', en: 'CV' },
-    'hero-tagline': { es: 'Game Developer | JR 3D Character Artist | JR 3D Environment Artist', en: 'Game Developer | JR 3D Character Artist | JR 3D Environment Artist' },
+    'hero-tagline': { es: 'Game Developer | 3D Character Artist | 3D Environment Artist', en: 'Game Developer | 3D Character Artist | 3D Environment Artist' },
     'hero-scroll-text': { es: 'Scroll', en: 'Scroll' },
     'hero-btn-proyectos': { es: 'Ver proyectos', en: 'View projects' },
     'hero-btn-links': { es: 'Ver mis links', en: 'View my links' },
