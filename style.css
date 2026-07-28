@@ -699,6 +699,105 @@ body::after {
 }
 .link-card.artstation .link-icon { color: var(--color-artstation); }
 
+/* ArtStation inactive — NODE INACTIVE */
+.link-card.artstation.inactive {
+  cursor: default;
+  opacity: 0.55;
+}
+.link-card.artstation.inactive:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--border-color);
+}
+.link-card.artstation.inactive:hover .link-icon {
+  transform: none;
+}
+.link-card.artstation.inactive .link-arrow {
+  display: none;
+}
+.link-card.artstation.inactive::before {
+  opacity: 0 !important;
+}
+
+/* Terminal status badge */
+.link-badge {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 10px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #f59e0b;
+  border: 1px dashed rgba(245, 158, 11, 0.35);
+  border-radius: 4px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+/* Rebuild status bar */
+.node-rebuild {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.node-rebuild-bar {
+  width: 100%;
+  max-width: 150px;
+  height: 12px;
+  background:
+    repeating-linear-gradient(90deg, transparent, transparent 9px, rgba(0, 255, 65, 0.12) 9px, rgba(0, 255, 65, 0.12) 10px),
+    rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nrb-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 75%;
+  background: rgba(0, 255, 65, 0.55);
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.2);
+  animation: nrb-pulse 2.5s ease-in-out infinite;
+}
+
+.node-rebuild-label {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgba(0, 255, 65, 0.5);
+  text-transform: uppercase;
+}
+
+@keyframes nrb-pulse {
+  0%, 100% { opacity: 0.6; width: 75%; }
+  50% { opacity: 1; width: 80%; }
+}
+
+/* Footer icon inactive */
+.contact-social a.inactive {
+  cursor: default;
+  opacity: 0.5;
+}
+.contact-social a.inactive:hover {
+  color: var(--text-secondary);
+  border-color: var(--border-color);
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+}
+
 .link-card.linkedin:hover {
   box-shadow: 0 0 30px rgba(10, 102, 194, 0.25), 0 20px 60px rgba(10, 102, 194, 0.1);
   border-color: var(--color-linkedin);
@@ -1360,6 +1459,30 @@ body::after {
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.7;
+}
+
+.proyecto-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 10px 24px;
+  background: transparent;
+  color: #c084fc;
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  border-radius: 50px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all var(--transition);
+}
+.proyecto-link:hover {
+  background: rgba(192, 132, 252, 0.1);
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
 }
 
 @media (max-width: 768px) {
