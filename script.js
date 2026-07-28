@@ -65,6 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
     'links-itch-desc': { es: 'Juegos publicados', en: 'Published games' },
     'links-github-desc': { es: 'Código y proyectos', en: 'Code & projects' },
     'links-artstation-desc': { es: 'Portafolio 3D', en: '3D Portfolio' },
+    'artstation-rebuild': { es: 'RECONSTRUCCIÓN EN CURSO', en: 'RECONSTRUCTION IN PROGRESS' },
+    'artstation-status': { es: 'SISTEMA INACTIVO', en: 'INACTIVE SYSTEM' },
     'links-linkedin-desc': { es: 'Perfil profesional', en: 'Professional profile' },
     'contacto-title': { es: 'Contacto', en: 'Contact' },
     'contacto-text': { es: '¿Tienes un proyecto en mente? Hablemos.', en: 'Have a project in mind? Let\'s talk.' },
