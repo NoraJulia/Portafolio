@@ -19,7 +19,7 @@
   --neon-yellow: #ffd700;
   --color-itch: #fa5c5c;
   --color-github: #8b5cf6;
-  --color-artstation: #13aff0;
+  /* --color-artstation: #13aff0; */
   --color-linkedin: #0a66c2;
   --accent: #5c0e8c;
   --transition: 0.3s ease;
@@ -678,7 +678,7 @@ body::after {
 
 .link-card.itch::before { background: rgba(250, 92, 92, 0.08); }
 .link-card.github::before { background: rgba(139, 92, 246, 0.08); }
-.link-card.artstation::before { background: rgba(19, 175, 240, 0.08); }
+/* .link-card.artstation::before { background: rgba(19, 175, 240, 0.08); } */
 .link-card.linkedin::before { background: rgba(10, 102, 194, 0.08); }
 
 .link-card.itch:hover {
@@ -693,13 +693,13 @@ body::after {
 }
 .link-card.github .link-icon { color: var(--color-github); }
 
-.link-card.artstation:hover {
+/* .link-card.artstation:hover {
   box-shadow: 0 0 30px rgba(19, 175, 240, 0.25), 0 20px 60px rgba(19, 175, 240, 0.1);
   border-color: var(--color-artstation);
 }
-.link-card.artstation .link-icon { color: var(--color-artstation); }
+.link-card.artstation .link-icon { color: var(--color-artstation); } */
 
-/* ArtStation inactive — NODE INACTIVE */
+/* ArtStation inactive — NODE INACTIVE
 .link-card.artstation.inactive {
   cursor: default;
   opacity: 0.55;
@@ -717,9 +717,9 @@ body::after {
 }
 .link-card.artstation.inactive::before {
   opacity: 0 !important;
-}
+} */
 
-/* Terminal status badge */
+/* Terminal status badge
 .link-badge {
   display: inline-block;
   margin-top: 6px;
@@ -734,9 +734,9 @@ body::after {
   text-transform: uppercase;
   position: relative;
   z-index: 1;
-}
+} */
 
-/* Rebuild status bar */
+/* Rebuild status bar
 .node-rebuild {
   display: flex;
   flex-direction: column;
@@ -783,9 +783,9 @@ body::after {
 @keyframes nrb-pulse {
   0%, 100% { opacity: 0.6; width: 75%; }
   50% { opacity: 1; width: 80%; }
-}
+} */
 
-/* Footer icon inactive */
+/* Footer icon inactive
 .contact-social a.inactive {
   cursor: default;
   opacity: 0.5;
@@ -796,7 +796,7 @@ body::after {
   background: transparent;
   box-shadow: none;
   transform: none;
-}
+} */
 
 .link-card.linkedin:hover {
   box-shadow: 0 0 30px rgba(10, 102, 194, 0.25), 0 20px 60px rgba(10, 102, 194, 0.1);
